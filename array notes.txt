@@ -1,0 +1,79 @@
+Array Notes:
+Arryay is data structure that can store multiple data of the same type in specific order.
+Although not built-in, we can use NumPy to create and access the arrays
+
+Arrays can have multiple  types:
+- 1 dimension array:  size is the number of elements
+- 2 dimension array:  like a matrix, size is defined with rows and columns of data
+- multi-dimention array:  defined by multiple dimensions, such as a 3d array with 3x3x3
+    *Matrix is a type arrays, but for different functions
+
+Differences between np.array and np.matrix
+(1) np.array = versatile n-dimension array that can be used in different operations, general purpose
+    np.matrix = usually used in linear algebra
+(2) np.array = can be in any dimension
+    np.matrix = always 2d
+(3) np.array = operates by elements
+    np.matrix = matrix multiplication
+
+Creating arrays:
+my_array = np.array([1,2,3,4,5])
+    ^ creates a 1 dimension array (1 dimensional vector)
+my_array = np.array([[1,2,3]])
+    ^ creates a row of array (2 dimensional vector)
+my_array = np.array([[1], [2], [3]])
+    ^ creates a column of array (2 dimensional vector)
+
+my_array = np.arange(2,20,5)
+    ^ produces an array of sequential numbers within a given interval
+    ^ arange(start, stop, step), issue may arise when floating points are involved
+    ^ output size is unknown
+    [ 2  7 12 17]
+my_array = np.linspace(2, 20, 10)
+    ^ creates an array of evenly spaced values within the given sample size / sample number
+    ^ linspace(start, stop, num)
+    ^ output size is known and can be set
+    [ 2.  4.  6.  8. 10. 12. 14. 16. 18. 20.]
+
+    
+
+Accessing arrays:
+Subscripting  (with colon:)
+* It enables selection of specific rows, columns, or subsets of data.
+* Basic syntax is: array[start:stop:step]
+if no value is set at start/stop, default values will be chosen
+    (start from first element / end at last element)
+    A[row (:) , column(:)]
+    : colon operator means all elements, whether it is row or column
+    * selecting a row = array[row_number,:]
+    * selecting a column = array[:,column_number]
+* selecting subarray [start_row:end_row (exclusive) , start_column:end_column (exclusive)]
+# stop index is exclusive
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#-----------------------------------------------------------------------------------------
+Numpy documentation / user guide
+
+# how to append in python
+# try out how to create array, how to access array, how to subscript and slicing array using colon and the tricks in it, and the meaning of append
+#concatenate
+
+Thus far, functions that have been used:
+.array
+.matrix
+.arange
+.linspace
