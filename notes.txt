@@ -1,0 +1,49 @@
+#-------CHAPTER 2------------------------------
+Syntax = the "format of programming"
+variable:
+    variable is data stored at an address and have a type
+    variable: data name, data value, address and type
+operation = function / subroutine
+
+#Types of data in python
+#Number:    Integers(1,2,3,-4...)    Floats(0.3,-0.523...)    complex(1+j)
+#String:    "hello", 'hiii'
+#Boolean:   True, False
+#list:      ['hello', True, 97, -2.833]     #variables in list can be in different data types
+#tuple:     
+#Dictionary:{'name':'Kippu', 'weight':'65', 'dank':'extreme'}
+#set:       
+#array:     
+
+value type:
+    mutable:    can be changed, such as lists, dictionary
+    immutable:  can't be changed, such as tuple, string
+
+print(type(10))          # Int
+print(type(3.14))        # Float
+print(type(1 + 3j))      # Complex number
+print(type('Asabeneh'))  # String
+print(type([1, 2, 3]))   # List
+print(type({'name':'Arshshed'})) # Dictionary
+print(type({9.8, 3.14, 2.7}))    # Set
+print(type((9.8, 3.14, 2.7)))    # Tuple
+
+use id(variable) to find the memory address of a variable, everytime the variable stores a new value,
+    the memory address changes, although it is the same variable name
+
+array(NumPy):
+    can have multiple dimensions
+    1 dimension array:  size is the number of elements
+    2 dimension array:  like a matrix, size is defined with rows and columns of data
+    multi-dimention array:  defined by multiple dimensions, such as a 3d array with 3x3x3
+
+All variables are array, thus, we need to know how to CREATE the array & ACCESS the elements in the array
+Accessing array means to GET or SET the array elements
+Exp:    1. lists: ordered, can store different data types, mutable, general purpose data storage
+        2. array module: More memory efficient than lists but supports only 1D arrays.
+        3. NumPy array: Highly optimized for numerical computations, supports multi-dimension arrays
+                        np.array([1, 2, 3, 4])
+
+#---------------------------------------------------------------------------------------------#
+
+#-------CHAPTER 3------------------------------
