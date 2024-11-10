@@ -12,6 +12,7 @@ A = np.array([  [1,4,7],
                 [3,6,9]])
 
 #3 methods: np.insert, np.take, np.hstack
+
 #Method 1:  syntax is np.insert(arr, obj, values)
 row1 = np.insert(A[2], 3, A[0, 0])
 row2 = np.insert(A[0], 3, A[0, 1])
