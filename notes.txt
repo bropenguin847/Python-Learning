@@ -108,7 +108,7 @@ Arithmetic operations:
 
 
     Left and Right division:
-    Originally exists in Matlab. Can solve using np.linalg.solve
+    Originally exists in Matlab. use np.linalg.solve
     for matrix multiplication, order from left to right is important
 
         np.linalg.solve(a, b):
@@ -120,9 +120,9 @@ Arithmetic operations:
                 In general: a*X = b --> X = (a.T)*b
                 np.linalg.solve(A, B)
 
-                When .solve(A, B) -> AX = B --> X = (A.T)*B
+                When .solve(A, B) -> AX = B --> X = (A^-1)*B
                     A is coefficient matrix, B is right hand side matrix
-                When .solve(B, A) -> BX = A --> X = (B.T)*A
+                When .solve(B, A) -> BX = A --> X = (B^-1)*A
                     B is coefficient matrix, A is right hand side matrix
 
             right division (/):
