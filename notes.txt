@@ -1,4 +1,4 @@
-#-------CHAPTER 2------------------------------
+#-------CHAPTER 2------------------------------------
 Syntax = the "format of programming"
 variable:
     variable is data stored at an address and have a type
@@ -9,11 +9,18 @@ operation = function / subroutine
 #Number:    Integers(1,2,3,-4...)    Floats(0.3,-0.523...)    complex(1+j)
 #String:    "hello", 'hiii'
 #Boolean:   True, False
+#NoneType:  :Represents the absence of a value or a null value. It is often used to signify 'nothing' or 'no value here'
+            None
 #list:      ['hello', True, 97, -2.833]     #variables in list can be in different data types
 #tuple:     
 #Dictionary:{'name':'Kippu', 'weight':'65', 'dank':'extreme'}
 #set:       
 #array:     
+
+Constants:
+Use all uppercase letters with underscores between words to define constants.
+Exp:    PI = 3.14
+        SPEED_OF_LIGHT = 299792458
 
 value type:
     mutable:    can be changed, such as lists, dictionary
@@ -28,8 +35,8 @@ print(type({'name':'Arshshed'})) # Dictionary
 print(type({9.8, 3.14, 2.7}))    # Set
 print(type((9.8, 3.14, 2.7)))    # Tuple
 
-use id(variable) to find the memory address of a variable, everytime the variable stores a new value,
-    the memory address changes, although it is the same variable name
+use id(variable) to find the memory address of a variable, everytime the variable
+    stores a new value, the memory address changes, although it is the same variable name
 
 array(NumPy):
     can have multiple dimensions
@@ -44,6 +51,120 @@ Exp:    1. lists: ordered, can store different data types, mutable, general purp
         3. NumPy array: Highly optimized for numerical computations, supports multi-dimension arrays
                         np.array([1, 2, 3, 4])
 
-#---------------------------------------------------------------------------------------------#
+Using subscripting, elements from array can be accessed by using : (available in array notes)
 
-#-------CHAPTER 3------------------------------
+#---------------------------------------------------------------------------------------------#
+Complex numbers:
+    created by adding a real part to an imaginary part with j
+    complexNum = 3 + 4j
+    The complex() function can also create complex numbers, taking two arguments:
+        the real and the imaginary parts
+    
+    complex(real, imag)
+
+    numpy.conj()function helps the user to conjugate any complex number. The conjugate of complex number
+        is obtained by changing the sign of its imaginary part.
+    If the complex number is 2+5j then its conjugate is 2-5j.
+
+String Methods: .upper(), .lower(), .strip(), .replace("xxx" , "yyy") .split(), .sort()
+                    .append("xxx"), .insert(index, "xxx"), .extend(["xxx" ,"yyy"])
+                    .remove("xxx"), .pop(index)
+                    .join(string), .count("xxx"), index("xxx)
+    use concatenate to combine strings together.
+        x = 5
+        y = "John"
+        print(x + y)
+
+
+#------------------------CHAPTER 3-------------------------------------------------
+    (   Complex data types  )
+Arithmetic operations:
+- Element wise(array):
+    performs operations on individual elements in an array
+    use standard arithmetic operators (+, -, *, /, **)
+    have multiple dimensions
+    np.array = element wise
+
+- Matrix wise:
+    performs operation on entire matrix
+    use @ operator or np.dot(), np.matmul(), np.linalg.solve()
+    always 2 dimension
+    np.matrix = matrix arithmetic
+
+    *transpose have higher precedence than multiplication
+    * Matrix inverse is different than matrix transpose
+
+    Operations:
+    np.dot(a, b, out=None):
+        Dot product of two arrays
+        can be replaced with @
+    both are pretty much the same when matrix calculation 
+    np.matmul(array1, array2):
+        Matrix product of two arrays
+        specifically for matrix multiplication
+
+    np.linalg.matrix_power(a,b):
+        a**b
+
+
+    Left and Right division:
+    Originally exists in Matlab. Can solve using np.linalg.solve
+    for matrix multiplication, order from left to right is important
+
+        np.linalg.solve(a, b):
+        solves a linear matrix equation. returns X as result
+        order of a and b is important, as calculation result will be different
+        think of aX = b
+
+            left division (\):
+                In general: a*X = b --> X = (a.T)*b
+                np.linalg.solve(A, B)
+
+                When .solve(A, B) -> AX = B --> X = (A.T)*B
+                    A is coefficient matrix, B is right hand side matrix
+                When .solve(B, A) -> BX = A --> X = (B.T)*A
+                    B is coefficient matrix, A is right hand side matrix
+
+            right division (/):
+                In general: Xa = b --> X = b*(a.T)
+                np.linalg.solve(A.T, B.T).T
+
+                Since linalg.solve only calculates aX = b, we need to transpose both side first
+                    to get the correct order
+                X*A = B
+                (X*A).T = B.T   # Transpose both side
+                (A.T)*(X.T) = B.T   # Using transposition rule, now we got the order, then can solve
+                ^ this is why both side need to transpose in .solve
+                the result will be X.T  to get X, we need to transpose again.
+                np.linalg.solve(A.T, B.T).T
+
+- check shape and size of arrays
+    A.shape, A.size->number of elements in array
+    A.ndim -> number of dimensions
+    len(A) -> number of rows
+    len(A[0]) -> number of columns 
+
+- VECTORIZATION
+    performing operations on entire arrays at once,
+        rather than using loops to iterate each time
+    have advantages of faster code execution, as code can be run in parallel
+
+
+
+
+
+
+#------------------------CHAPTER 4-------------------------------------------------
+    (   Control flows  )
+
+Converting for loop > while loop:
+1. initialize counter at beginning of loop, i = 0
+2. run while loop with condition being true i < 5
+3. increment counter i += 1
+
+?advantages of condition vs loops???
+
+
+
+#------------------------CHAPTER 5-------------------------------------------------
+Functions:

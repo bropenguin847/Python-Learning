@@ -35,8 +35,8 @@ print(matrix_mul_result_alt)
 # 4. Matrix Left Division
 # Solving AX = B using np.linalg.solve
 # Interpreted as B \ A or X = A.T*B
-matrix_left_div_result = np.linalg.solve(B, A)
-print("\nMatrix Left Division (np.linalg.solve(B, A)):")
+matrix_left_div_result = np.linalg.solve(A, B)
+print("\nMatrix Left Division (np.linalg.solve(A, B)):")
 print(matrix_left_div_result)
 
 # 5. Matrix Right Division

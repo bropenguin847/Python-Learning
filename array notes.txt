@@ -35,8 +35,6 @@ my_array = np.linspace(2, 20, 10)
     ^ output size is known and can be set
     [ 2.  4.  6.  8. 10. 12. 14. 16. 18. 20.]
 
-    
-
 Accessing arrays:
 Subscripting  (with colon:)
 * It enables selection of specific rows, columns, or subsets of data.
@@ -50,30 +48,58 @@ if no value is set at start/stop, default values will be chosen
 * selecting subarray [start_row:end_row (exclusive) , start_column:end_column (exclusive)]
 # stop index is exclusive
 
+fancy indexing = ([x1,x2],[y1,y2])
+use it for indexing multiple elements
 
+##Tips###
+use .flatten() to flatten an array to 1 dimension
 
+Broadcasting:
+-allows arrays of different sizes to be combined arithmetically. By stretching their sizes,
+smaller arrays can match the shape of larger array.
+-the smaller array “broadcasts” across the larger array so that they have compatible shapes
 
+    Conditions:
+    - Align Dimensions: If arrays have different numbers of dimensions, add same element to shape
+        of the smaller array until both shapes match in dimensionality
+    - Dimension Compatibility: For each dimension, the sizes must either:
+        Be equal, or
+        One of the sizes must be 1 (allowing it to expand to match the other)
 
-
-
-
-
-
-
-
-
-
-
+    import numpy as np
+    a = np.array([[0.0], [10.0], [20.0], [30.0]])
+    b = np.array([1.0, 2.0, 3.0])
+    a[:, np.newaxis]    <-run Broadcasting
+    print(a+b)
 
 #-----------------------------------------------------------------------------------------
 Numpy documentation / user guide
 
-# how to append in python
-# try out how to create array, how to access array, how to subscript and slicing array using colon and the tricks in it, and the meaning of append
-#concatenate
+#1 np.append(array, values, axis=None)
+    Append values to the end of an array
+no function that can concatenate in numpy
+
+#2 np.insert(array, index, values (array like), axis=None)
+    Insert values along the given axis before the given indices
+
+#3 np.size(array, axis=None(integer, optional) )
+    Return the number of elements along a given axis
+
+#4 np.split(array, indices_or_sections, axis=0)
+    Split an array into multiple sub-arrays
+
+#5 np.zeros(shape, dtype=float, order='C', *, like=None)
+    Return a new array of given shape and type, filled with zeros
+
+#6 np.full(shape, fill_value, dtype=None, order='C', *, device=None, like=None)
+    Return a new array of given shape and type, filled with fill_value
+
+#7 np.round(a, decimals=0)
 
 Thus far, functions that have been used:
 .array
 .matrix
 .arange
 .linspace
+.flatten
+.zeros
