@@ -1,6 +1,5 @@
 import numpy as np
 
-# Define two 2x2 matrices
 A = np.matrix([[1, 2],
               [3, 4]])
 
@@ -33,17 +32,19 @@ matrix_mul_result_alt = np.matmul(A, B)
 print("\nMatrix Multiplication (np.matmul(A, B)):")
 print(matrix_mul_result_alt)
 
-# 4. Matrix Right Division
-# Solving XA = B using np.linalg.solve (interpreted as A / B)
-matrix_right_div_result = np.linalg.solve(B.T, A.T).T
-print("\nMatrix Right Division (np.linalg.solve(B.T, A.T).T):")
-print(matrix_right_div_result)
-
-# 5. Matrix Left Division
-# Solving AX = B using np.linalg.solve (interpreted as B \ A)
+# 4. Matrix Left Division
+# Solving AX = B using np.linalg.solve
+# Interpreted as B \ A or X = A.T*B
 matrix_left_div_result = np.linalg.solve(B, A)
 print("\nMatrix Left Division (np.linalg.solve(B, A)):")
 print(matrix_left_div_result)
+
+# 5. Matrix Right Division
+# Solving XA = B using np.linalg.solve
+# Interpreted as A / B or X = B*A.T
+matrix_right_div_result = np.linalg.solve(B.T, A.T).T
+print("\nMatrix Right Division (np.linalg.solve(B.T, A.T).T):")
+print(matrix_right_div_result)
 
 # 6. Matrix Power
 # Using np.linalg.matrix_power() to raise matrix A to the power of 2

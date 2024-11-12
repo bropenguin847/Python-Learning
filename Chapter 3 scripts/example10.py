@@ -1,5 +1,4 @@
 # Relational Operators in Python
-
 # Define sample variables
 a = 5
 b = 10
