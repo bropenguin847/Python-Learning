@@ -168,3 +168,12 @@ Converting for loop > while loop:
 
 #------------------------CHAPTER 5-------------------------------------------------
 Functions:
+
+
+
+#------------------------CHAPTER 6-------------------------------------------------
+input and output functions
+zip() function
+ - combine two or more iterables element wise
+
+ import and export data in python
