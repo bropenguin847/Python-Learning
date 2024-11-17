@@ -10,3 +10,5 @@ print('A table of degrees to radians')
 print(f' deg° π rad')
 for d, r in zip(degree, radian):
     print(f'{d:6.2f}° {r:10.4f}π')
+
+A[:,2], A[0:1,0:1]

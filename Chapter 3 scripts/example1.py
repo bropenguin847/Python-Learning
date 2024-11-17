@@ -43,8 +43,10 @@ print(matrix_left_div_result)
 # Solving XA = B using np.linalg.solve
 # Interpreted as A / B or X = B*A.T
 matrix_right_div_result = np.linalg.solve(B.T, A.T).T
+right_div_2 = np.linalg.solve(A.T, B)
 print("\nMatrix Right Division (np.linalg.solve(B.T, A.T).T):")
 print(matrix_right_div_result)
+print(right_div_2)
 
 # 6. Matrix Power
 # Using np.linalg.matrix_power() to raise matrix A to the power of 2

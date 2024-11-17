@@ -117,7 +117,7 @@ Arithmetic operations:
         think of aX = b
 
             left division (\):
-                In general: a*X = b --> X = (a.T)*b
+                In general: a*X = b --> X = (a^-1)*b
                 np.linalg.solve(A, B)
 
                 When .solve(A, B) -> AX = B --> X = (A^-1)*B
@@ -128,6 +128,7 @@ Arithmetic operations:
             right division (/):
                 In general: Xa = b --> X = b*(a.T)
                 np.linalg.solve(A.T, B.T).T
+                ^ might have some issue
 
                 Since linalg.solve only calculates aX = b, we need to transpose both side first
                     to get the correct order
