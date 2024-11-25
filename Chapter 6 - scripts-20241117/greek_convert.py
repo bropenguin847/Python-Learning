@@ -3,7 +3,7 @@
 
 greek_table = { 'alpha': '3B1', 'beta': '3B2', 'gamma': '3B3', 'delta': '3B4', 'epsilon': '3B5', 'zeta': '3B6', 'eta': '3B7', 'theta': '3B8' } 
 # ^ Dictionary defininig each greek character
-misc_table = { 'lesbian': '26A2', 'gay': '26A3', 'straight': '26A4', 'trans': '26A5', 'trans2': '26A7', 'bjman': '13010', 'nsfw': '13072', 'nsfw2': '13055',
+misc_table = { 'lesbian': '26A2', 'gay': '26A3', 'straight': '26A4', 'trans': '26A5',		 'trans2': '26A7', 'bjman': '13010', 'nsfw': '13072', 'nsfw2': '13055',
 			  'skull': '2620', 'radioactive': '2622', 'communism': '262D', 'yin_yang': '262F', 'swastika': '5350'}
 
 # Function to convert Greek letter names to their hex values 
