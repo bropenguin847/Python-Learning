@@ -196,4 +196,17 @@ zip() function
     converting a Python object into a byte stream to store it in a file/database,
     maintain program state across sessions, or transport data over the network.
 
-fefefe
+
+
+
+
+
+#------------------------CHAPTER 10-------------------------------------------------
+# Polynomials
+
+With each polynomial, there is a vector representation for it.
+starting with the highest power, then slowly getting to x^0
+uses functions like np.polymul, np.polydiv, np.roots, np.polyval
+np.polydiv will return 2 variables. np.polyval = evaluate when x = something
+np.polyfit => 
+n of degree just up to 2
