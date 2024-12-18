@@ -1,13 +1,5 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Nov 25 21:40:12 2024
-
-@author: ASUS
-"""
-
 import numpy as np
 import pandas as pd
-import openpyxl
 import os
 current_dir = os.path.dirname(__file__)
 scores_path = os.path.join(current_dir, 'student_scores.xlsx')
@@ -25,7 +17,6 @@ def assign_grade(scores):
         return 'D'
     else:
         return 'F'
-
 
 def assign_pass_or_fail(scores):
     if scores>=70:

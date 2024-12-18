@@ -1,20 +1,11 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Nov 25 21:40:11 2024
-
-@author: ASUS
-"""
-
 import numpy as np
 import pandas as pd
-import openpyxl
 import os
 current_dir = os.path.dirname(__file__)
 employee_path = os.path.join(current_dir, 'employee_data.xlsx')
 year = pd.read_excel(employee_path, sheet_name='Details', header=0).iloc[0:, 3]
 department=pd.read_excel(employee_path, sheet_name='Details', header=0).iloc[0:, 1]
 length=len(year)
-
 
 bonus_list = []
 status_list=[]
@@ -39,7 +30,6 @@ while index < length:
     bonus_list.append(bonus)
     status_list.append(status)
     index += 1
-
 
 bonus_list.insert(0, "Bonus")
 status_list.insert(0,"Status")

@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Nov 25 21:46:11 2024
-
-@author: ASUS
-"""
-
 import pandas as pd
 
 def adjust_price (category,price):
@@ -15,9 +8,7 @@ def adjust_price (category,price):
     else:
         return price
 
-  
 df = pd.read_excel('product_catalog.xlsx', sheet_name='Products')
-
 data = df.to_numpy()
 
 adjusted_price=[]

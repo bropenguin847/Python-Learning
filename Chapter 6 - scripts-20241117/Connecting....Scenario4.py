@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Nov 25 22:30:01 2024
-
-@author: ASUS
-"""
-
 import pandas as pd
 
 def categorize_expense (amount):
