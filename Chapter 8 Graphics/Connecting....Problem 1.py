@@ -11,5 +11,3 @@ plt.xlabel('Time(t)')
 plt.ylabel('Velocity(v)')
 plt.title('Problem 1')
 plt.show()
-
-

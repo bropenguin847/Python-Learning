@@ -11,7 +11,7 @@ t=np.arange(0, 11, 1)
 #y-axis
 x= A * np.sin(ω*t)  
 
-plt.subplot(1,3,1)
+plt.subplot(1,2,1)
 plt.plot(t,x)
 plt.title("Displacement x(t)")
 plt.xlabel("Time(t)")
@@ -24,7 +24,7 @@ t=np.arange(0, 11, 1)
 #y-axis
 v= A * ω * np.cos(ω*t)  
 
-plt.subplot(1,3,3)
+plt.subplot(1,2,2)
 plt.plot(t,v)
 plt.title("Velocity v(t)")
 plt.xlabel("Time(t)")
