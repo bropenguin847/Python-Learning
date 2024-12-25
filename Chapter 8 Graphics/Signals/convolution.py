@@ -101,12 +101,12 @@ yt = np.convolve(g, h, mode='full')
 t_conv = np.linspace(-4,4, len(yt))
 ###################
 plt.subplot(2,2,1)
-plt.plot(t, g, color='midnightblue')
+plt.plot(t, g, color='blueviolet')
 graphlabel('Figure 2 (a)', 'Time (seconds)', 'Triangle, g')
 plt.axis([-2, 3, 0, 3])
 
 plt.subplot(222)
-plt.plot(t, h, color='dodgerblue')
+plt.plot(t, h, color='mediumvioletred')
 graphlabel('Figure 2 (b)', 'Time (seconds)', 'Rectangle, h')
 plt.axis([-2, 3, 0, 3])
 
