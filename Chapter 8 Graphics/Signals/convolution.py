@@ -79,22 +79,19 @@ plt.show()
 
 # Task 2
 slant = waveform(t, -1, 1)
-g = np.zeros_like(slant.time)
+g = np.zeros_like(t)
 h = np.zeros_like(t)
 
-# for i, time in enumerate(slant.time):
-#     # Only rising edge
-#     if slant.t1 <= time <= slant.t2:
-#         g[i] = 2 * slant.t1/time
-#     else:
-#         g[i] = 0
-g = 2 * (np.abs(t + 1) - np.abs(t - 1))
-g[g < 0] = 0
+for i, time in enumerate(slant.time):
+    if slant.t1 <= time <= slant.t2:
+        g[i] = 1 * (time +1)
+    else:
+        g[i] = 0
 
 plt.plot(t, g)
 plt.title('Figure 2 (a)')
 plt.xlabel('Time (seconds)')
 plt.ylabel('Triangle, g')
 plt.grid(True)
-plt.axis([-2, 2, -2, 2])
+plt.axis([-2, 2, 0, 3])
 plt.show()
