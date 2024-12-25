@@ -18,6 +18,9 @@ def graphlabel(title, xlabel, ylabel):
 # Define triangle
 triangle = waveform(t, 0, 2)
 x1 = np.zeros_like(triangle.time)      # Initialize with zero first
+# Define square
+square = waveform(t, -1, 1)
+x2 = np.zeros_like(square.time)
 
 for i, time in enumerate(triangle.time):
     # Rising part
@@ -26,10 +29,6 @@ for i, time in enumerate(triangle.time):
     # Falling part
     elif triangle.center < time <= triangle.t2:
         x1[i] = 2 * (2 - time)
-
-# Define square
-square = waveform(t, -1, 1)
-x2 = np.zeros_like(square.time)
 
 for i, time in enumerate(square.time):
     x2[i] = 0
@@ -63,7 +62,7 @@ graphlabel('Figure 1 (c)', 'Time (seconds)', 'z')
 plt.axis([-2, 3, 0, 4])
 
 plt.subplot(3,2,(5,6))
-plt.plot(t_conv, yt, color='forestgreen')
+plt.plot(t_conv, yt, 'forestgreen')
 graphlabel('Figure 1 (d)', 'Time (seconds)', 'Convolution, y')
 plt.axis([-3, 6, 0, 500])
 
@@ -101,22 +100,22 @@ yt = np.convolve(g, h, mode='full')
 t_conv = np.linspace(-4,4, len(yt))
 ###################
 plt.subplot(2,2,1)
-plt.plot(t, g, color='blueviolet')
+plt.plot(t, g, 'blueviolet')
 graphlabel('Figure 2 (a)', 'Time (seconds)', 'Triangle, g')
 plt.axis([-2, 3, 0, 3])
 
 plt.subplot(222)
-plt.plot(t, h, color='mediumvioletred')
+plt.plot(t, h, 'mediumvioletred')
 graphlabel('Figure 2 (b)', 'Time (seconds)', 'Rectangle, h')
 plt.axis([-2, 3, 0, 3])
 
 plt.subplot(223)
-plt.plot(t, fig2c, color='cornflowerblue')
+plt.plot(t, fig2c, 'cornflowerblue')
 graphlabel('Figure 2 (c)', 'Time (seconds)', 'z')
 plt.axis([-2, 3, 0, 3])
 
 plt.subplot(224)
-plt.plot(t_conv, yt, color='mediumseagreen')
+plt.plot(t_conv, yt, 'mediumseagreen')
 graphlabel('Figure 2 (d)', 'Time (seconds)', 'Convolution, y')
 plt.axis([-3, 4, 0, 1000])
 
