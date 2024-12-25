@@ -88,16 +88,12 @@ h = np.zeros_like(t)
 #         g[i] = 2 * slant.t1/time
 #     else:
 #         g[i] = 0
-slant2 = np.where(t <= slant.t1,
-        2 * t / slant.t1,  # Rising edge
-        np.where(
-            t <= slant.t1 + slant.t2,
-            2 - 2 * (t - slant.t1) / slant.t2,  # Falling edge
-            0  # After falling edge
-        )
-    )
+g[(t >= -1) & (t <= 0)] = 2 * (t[(t >= -1) & (t <= 0)] + 1)
 
-plt.plot(slant2)
+# Falling part of the triangular wave
+g[(t > 0) & (t <= 1)] = 2 * (1 - t[(t > 0) & (t <= 1)])
+
+plt.plot(t, g)
 plt.title('Figure 2 (a)')
 plt.xlabel('Time (seconds)')
 plt.ylabel('Triangle, g')
