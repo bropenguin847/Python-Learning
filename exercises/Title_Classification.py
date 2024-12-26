@@ -19,7 +19,7 @@ def classify(cgpa):
         return "Fail"
 
 n_students  = int(input("How many students: "))
-for i in range (0,n_students):
+for i in range (0, n_students):
     print("\nStudent info ", i + 1, ":")
     name = input("Student name: ")
     name_list.append(name)  #add the name input into the list
@@ -37,13 +37,3 @@ final_list = np.concatenate([[name_list],[age_list],[cgpa_list], [title_list]])
 total_rows = len(final_list)
 total_columns = len(final_list[0])
 print(final_list)
-
-#------------------------------------------------------------------
-# from tkinter import *
-# window = Tk()
-# window.title("Title Classification")
-# window.geometry('600x500')
-# t = Table(window)
-# window.mainloop()
-# add main function
-#------------------------------------------------------------------

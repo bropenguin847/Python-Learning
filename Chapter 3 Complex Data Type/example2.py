@@ -1,6 +1,5 @@
 import numpy as np
 
-# Define two 2x2 matrices
 A = np.array([[1, 2],
               [3, 4]])
 

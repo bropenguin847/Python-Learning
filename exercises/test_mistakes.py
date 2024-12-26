@@ -22,6 +22,6 @@ Z = b[1, 1, 0]      # For single bracket it is just basic indexing, fancy indexi
 """
 I had made the mistake of thinking that single bracket is fancy indexing, thus getting out
 can you imagine my pain when i made this mistake, even though i had read about it???!!!
-it hurts more when you know the concept already, but you still make the mistake, than when you dont know
-    the mistake
+it hurts more when you know the concept already but you still make the mistake,
+than when you dont know the mistake
 """

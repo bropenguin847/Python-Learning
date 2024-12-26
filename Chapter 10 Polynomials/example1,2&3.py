@@ -1,4 +1,17 @@
 import numpy as np
+# Multiply and Divide
+# Define two polynomials
+p1 = [2, 3, 4]  # 2x^2 + 3x + 4
+p2 = [1, 2]     # x + 2
+
+# Multiply the polynomials
+result = np.polymul(p1, p2)
+print(result)
+
+# Divide the polynomials
+quotient, remainder = np.polydiv(p1, p2)
+print("Quotient:", quotient)
+print("Remainder:", remainder)
 
 # Define the polynomials as vectors
 p1 = [1, 3, 0, 2]  # Represents x^3 + 3x^2 + 2

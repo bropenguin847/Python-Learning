@@ -156,7 +156,7 @@ Arithmetic operations:
 
 
 #------------------------CHAPTER 4-------------------------------------------------
-    (   Control flows  )
+    (   Control flows   )
 
 Converting for loop > while loop:
 1. initialize counter at beginning of loop, i = 0

@@ -12,9 +12,6 @@ N, A = np.meshgrid(n, a)
 B = A * (1 + r) ** N
 
 # Display the arrays A, N, and the resulting array B
-print("Array A:")
-print(A)
-print("\nArray N:")
-print(N)
-print("\nResult Array B:")
-print(B)
+print(f"Array A:\n{A}")
+print(f"\nArray N:\n{N}")
+print(f"\nResult Array B:\n{B}")
