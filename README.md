@@ -1,5 +1,5 @@
 # Python Learning
-![python_logo](<../../Pictures/english questionaire/python-logo-only.svg>)
+![python_logo](python-logo-only.png)
 For **Scientific Programming Course** which introduces the fundamentals of scientific programming languages. Emphasis is placed on fundamentals of programming, implementing algorithms, program design and visualization. The goal is to learn the skills in scientific computing, tools, techniques that can be used to solve engineering problems. This course uses Python as its high level programming language with various libraries such as NumPy and Matplotlib, with VS Code as IDE.
 
 # **Notes**
@@ -28,4 +28,4 @@ pip install pandas
 ```pip install matplotlib```
 [MatPlotLib documentation](https://matplotlib.org/stable/index.html)
 [matplotlib colors](https://i.sstatic.net/lFZum.png)
-[Pandas Documentation](https://pandas.pydata.org/docs/getting_started/index.html#getting-started)
+[Pandas Documentation]()
