@@ -6,7 +6,7 @@ class waveform:
         self.time = time
         self.t1, self.t2 = t1, t2
         self.center = (t2-t1)/2
-t = np.linspace(-2, 3, 1000)
+t = np.linspace(-2, 3, 500)
 
 def graphlabel(title, xlabel, ylabel):
     plt.title(title)
@@ -38,6 +38,7 @@ for i, time in enumerate(square.time):
 # z(t) = x1(t) + x2(t)
 fig1c = x1 + x2
 
+# yt = np.convolve(x1, x2, mode='full')
 yt = np.convolve(x1, x2, mode='full')
 t_conv = np.linspace(triangle.time[0] + square.time[0], triangle.time[-1] + square.time[-1], len(yt))
 #############
@@ -52,9 +53,12 @@ graphlabel('Figure 1 (b)', 'Time (seconds)', 'Rectangle, x2')
 plt.axis([-2, 3, 0, 2])
 
 plt.subplot(3, 2, 3)
-plt.plot(t, x2, 'crimson', t, x1, 'navy')
+plt.plot(t, x2, 'crimson', label= 'x1')
+plt.plot(t, x1, 'navy', label= 'x2')
 graphlabel('Overlap', 'Time (seconds)', '')
+plt.legend(loc='upper left')
 plt.axis([-2, 3, 0, 2])
+
 
 plt.subplot(3, 2, 4)
 plt.plot(t, fig1c, 'deepskyblue')
@@ -64,7 +68,7 @@ plt.axis([-2, 3, 0, 4])
 plt.subplot(3,2,(5,6))
 plt.plot(t_conv, yt, 'forestgreen')
 graphlabel('Figure 1 (d)', 'Time (seconds)', 'Convolution, y')
-plt.axis([-3, 6, 0, 500])
+plt.axis([-2, 6, 0, 200])
 
 plt.tight_layout()
 plt.show()
@@ -117,7 +121,7 @@ plt.axis([-2, 3, 0, 3])
 plt.subplot(224)
 plt.plot(t_conv, yt, 'mediumseagreen')
 graphlabel('Figure 2 (d)', 'Time (seconds)', 'Convolution, y')
-plt.axis([-3, 4, 0, 1000])
+plt.axis([-3, 4, 0, 400])
 
 plt.tight_layout()
 plt.show()

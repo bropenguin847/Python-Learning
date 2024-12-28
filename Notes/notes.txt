@@ -210,3 +210,21 @@ uses functions like np.polymul, np.polydiv, np.roots, np.polyval
 np.polydiv will return 2 variables. np.polyval = evaluate when x = something
 np.polyfit => 
 n of degree just up to 2
+
+
+#------------------------CHAPTER 11-------------------------------------------------
+# Intro to Data Analytics
+
+Aim: Use basic statistical function, understand data analytical process, apply data analysis
+
+Common functions from NumPy and SciPy library
+np.max()        Maximum value
+np.min()        Smallest value
+np.mean()       Average / mean value
+np.median()     Median value
+np.std()        Standard deviation
+np.var()        Variance, which measures the spread or dispersion of the
+                values
+stats.mode()    Identifies the mode, or the most frequent value, in the 
+                dataset (requires scipy.stats).
+
