@@ -1,4 +1,4 @@
-# Title Classification #
+# Title Classification in University #
 import numpy as np
     
 name_list = []
