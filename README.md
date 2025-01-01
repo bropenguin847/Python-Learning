@@ -81,11 +81,17 @@ python -m pip install scipy
 ***
 # Appendix 📌
 Cheatsheet for subscripting and operator precedence
-![subscripting](image.png =100x100)
-![operator precedence](image-1.png)
-[🔴🟠🟡🟢🔵🟣matplotlib colors](https://i.sstatic.net/lFZum.png)<br>
+![subscripting](appendix1.png)<br>
+![operator precedence](appendix2.png)<br>
+
+All the colors for matplotlib<br>
+[Simple matplotlib markers, line style and color](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html)<br>
+[🔴🔵🟡matplotlib colors🟢🟠🟣](https://i.sstatic.net/lFZum.png)<br>
+
+How to write clean Python code<br>
 [Pep8 Style Guide for Python Code](https://pep8.org/)<br>
 ***
-**Helpful Videos**
+# Helpful Videos
 [**CS50 Introduction to Python**](https://www.youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V)
+
 [Python explained simply](https://www.youtube.com/watch?v=x7X9w_GIm1s)
