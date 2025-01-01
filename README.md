@@ -1,10 +1,10 @@
-# Python Learning 🚀
-![python_logo](python-logo-only.png =250x250)<br>
+# 📖 Python Learning 🚀
 For **Scientific Programming Course** which introduces the fundamentals of Scientific Programming.
 Emphasis is placed on fundamentals of programming, implementing algorithms, 
 program design and visualization. The goal is to learn the skills in scientific computing,
 tools, techniques that can be used to solve engineering problems.
 <br>
+
 There are 12 chapters in Scientific Programming course:
 - Chapter 1: Overview of Languages
 - Chapter 2: Introduction to Programming Platform (Python)
@@ -34,17 +34,16 @@ I would like to keep this as my way of learning how to maintain a repo, make doc
 
 In the future, perhaps I will make a wiki page for all the shortcuts to learn Python.
 
-[Python explained simply](https://www.youtube.com/watch?v=x7X9w_GIm1s)
-
+***
 # [**Notes** ✍️](https://github.com/bropenguin847/Python-Learning/tree/main/Notes)
 Contains notes for each chapter. Notes will be continually updated.
 For array notes, contain specific notes regarding numpy arrays, numpy functions and so on.
 Further references can be found in the appendix.
-
+***
 # [**Exercises** ᕙ(  •̀ ᗜ •́  )ᕗ](https://github.com/bropenguin847/Python-Learning/tree/main/exercises)
 In exercises folder, contain exercises for python, such as array manipulation, bubble sort 
 and my mistakes that I have made during my tests (regretting life).
-
+***
 # [Assignment 📚](https://github.com/bropenguin847/Python-Learning/tree/main/Assignment)
 In the assignment folder, contains 3 tasks. All requires using Python to extract data from csv file using Python libraries such as Pandas.
 
@@ -52,7 +51,7 @@ In all the .py file, the problem scenario's are stated on the top.
 datastat_module is a custom Python file that contains all the functions that can help out with the other files. It is essentially a custom library.
 
 For the data in Assignment, outliers and missing values have been added in the .csv files
-
+***
 # Scripts 📝
 All the folders labeled with Chapter contain scripts for each chapter. Some have xlsx or csv files used as data. Feel free to try it out.
 
@@ -63,10 +62,10 @@ In Chapter 8, the folder 'Signals' is for Signals and System course. It's a requ
 
 Chapter 7 (Debugging) and Chapter 12 (OOP) is not included in this repo, but I will try to find the notes for both of those chapter.
 
-Additional links for Debugging and OOP:
-![Debugging in VS Code](https://www.youtube.com/watch?v=b4p-SBjHh28)
-![OOP](https://www.youtube.com/watch?v=JeznW_7DlB0)
-
+Additional links for Debugging and OOP:<br>
+[Debugging in VS Code](https://www.youtube.com/watch?v=b4p-SBjHh28)<br>
+[OOP](https://www.youtube.com/watch?v=JeznW_7DlB0)<br>
+***
 # Libraries 📖
 Numpy, Matplotlib, Pandas & SciPy. With documentation links provided as well.
 ```python
@@ -78,12 +77,15 @@ python -m pip install scipy
 [🎲NumPy documentation](https://numpy.org/doc/stable/user/absolute_beginners.html)<br>
 [📈MatPlotLib documentation](https://matplotlib.org/stable/index.html)<br>
 [🐼Pandas Documentation](https://pandas.pydata.org/docs/index.html)<br>
-[SciPy Documentation](https://docs.scipy.org/doc/scipy/tutorial/index.html#user-guide)<br>
-
+[🐍SciPy Documentation](https://docs.scipy.org/doc/scipy/tutorial/index.html#user-guide)<br>
+***
 # Appendix 📌
 Cheatsheet for subscripting and operator precedence
 ![subscripting](image.png =100x100)
 ![operator precedence](image-1.png)
 [🔴🟠🟡🟢🔵🟣matplotlib colors](https://i.sstatic.net/lFZum.png)<br>
 [Pep8 Style Guide for Python Code](https://pep8.org/)<br>
+***
+**Helpful Videos**
 [**CS50 Introduction to Python**](https://www.youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V)
+[Python explained simply](https://www.youtube.com/watch?v=x7X9w_GIm1s)
