@@ -96,6 +96,13 @@ no function that can concatenate in numpy
 
 #7 np.round(a, decimals=0)
 
+
+
+
+
+# 
+
+
 Thus far, functions that have been used:
 .array
 .matrix

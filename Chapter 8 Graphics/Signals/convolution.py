@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-class waveform:
+class Waveform:
     def __init__(self, time, t1, t2):
         self.time = time
         self.t1, self.t2 = t1, t2
@@ -16,9 +16,9 @@ def graph_label(title, xlabel, ylabel):
 
 # Task 1
 # Define triangle & rectangle
-triangle = waveform(t, 0, 2)
+triangle = Waveform(t, 0, 2)
 x1 = np.zeros_like(t)      # Initialize with zero first
-square = waveform(t, -1, 1)
+square = Waveform(t, -1, 1)
 x2 = np.zeros_like(t)
 
 for i, time in enumerate(t):
@@ -65,7 +65,7 @@ plt.show()
 
 #####################################################
 # Task 2
-slant = waveform(t, -1, 1)
+slant = Waveform(t, -1, 1)
 g = np.zeros_like(t)
 h = np.zeros_like(t)
 
@@ -77,8 +77,8 @@ for i, time in enumerate(slant.time):
         g[i] = 0
       
 # Define square
-square1 = waveform(t, -1, 0)
-square2 = waveform(t, 1, 2)
+square1 = Waveform(t, -1, 0)
+square2 = Waveform(t, 1, 2)
 
 for i, time in enumerate(t):
     if square1.t1 <= time <= square1.t2:

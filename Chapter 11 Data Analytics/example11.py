@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy import interpolate
+# from scipy import interpolate
 
 # Define a vector of nonuniform sample points and evaluate the sine function over the points
 x1 = np.arange(-4*np.pi, 0, 0.1)
@@ -19,9 +19,9 @@ fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(8, 8))
 # Plot the original data with outliers before replacing them
 ax1.scatter(x, A, label='Original Data with Outliers', color='blue')
 ax1.set_title("Original Data with Outliers")
-ax1.legend()
+ax1.legend(loc='lower left')
 
-# Detect the outliers (values > 1 or < -1)
+# Detect the outliers (values > 1 or < -1), putting threshold
 outliers = (A > 1) | (A < -1)
 A[outliers] = np.nan  # Replace outliers with NaN
 
@@ -34,7 +34,7 @@ F[nans] = np.interp(x[nans], x[~nans], A[~nans])
 ax2.scatter(x, A, label='Data After Replacing Outliers with NaN', color='blue')
 ax2.scatter(x[nans], F[nans], label='Filled Data (Outliers Replaced)', color='red')
 ax2.set_title("Data After Outliers Replaced with Interpolation")
-ax2.legend(loc='lower right')
+ax2.legend(loc='lower left')
 
 plt.tight_layout()
 plt.show()

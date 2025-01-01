@@ -30,7 +30,7 @@ print(type(10))          # Int
 print(type(3.14))        # Float
 print(type(1 + 3j))      # Complex number
 print(type('Asabeneh'))  # String
-print(type([1, 2, 3]))   # List
+print(type([1, 2, 3]))   # List / Array
 print(type({'name':'Arshshed'})) # Dictionary
 print(type({9.8, 3.14, 2.7}))    # Set
 print(type((9.8, 3.14, 2.7)))    # Tuple
@@ -74,6 +74,9 @@ String Methods: .upper(), .lower(), .strip(), .replace("xxx" , "yyy") .split(), 
         x = 5
         y = "John"
         print(x + y)
+
+
+
 
 
 #------------------------CHAPTER 3-------------------------------------------------
@@ -154,7 +157,6 @@ Arithmetic operations:
 
 
 
-
 #------------------------CHAPTER 4-------------------------------------------------
     (   Control flows   )
 
@@ -167,8 +169,13 @@ Converting for loop > while loop:
 
 
 
+
+
 #------------------------CHAPTER 5-------------------------------------------------
 Functions:
+functions will return some values
+can import functions
+
 
 
 
@@ -200,7 +207,6 @@ zip() function
 
 
 
-
 #------------------------CHAPTER 10-------------------------------------------------
 # Polynomials
 
@@ -210,6 +216,9 @@ uses functions like np.polymul, np.polydiv, np.roots, np.polyval
 np.polydiv will return 2 variables. np.polyval = evaluate when x = something
 np.polyfit => 
 n of degree just up to 2
+
+
+
 
 
 #------------------------CHAPTER 11-------------------------------------------------
@@ -228,3 +237,96 @@ np.var()        Variance, which measures the spread or dispersion of the
 stats.mode()    Identifies the mode, or the most frequent value, in the 
                 dataset (requires scipy.stats).
 
+Calculating Mean Along Rows and Columns Using NumPy
+With column wise, use axis=0
+
+
+Calculating Mean of the Entire Matrix Using NumPy
+
+Example: Temperature Data Analysis with Python
+
+
+*Data sorting*
+use NumPy's .sort() function, default is ascending
+for descending order: .sort()[::-1]
+
+1D array: arranged in ascending / descending order
+2D array: Sort by column / row [using axis=0/1, former is column, latter is row]
+            example: np.sort(array, axis=0)[::-1]
+
+Example 5 : Finding the Two Highest and Lowest Temperatures and
+Their Respective Days Using NumPy
+
+np.argsort(): Perform an indirect ascending sort along the given axis, then 
+                returns an array of indices of the same shape in sorted order
+
+
+
+Useful Video on Data Analysis: https://www.youtube.com/watch?v=yZvFH7B6gKI
+
+*Use of Data Analtics*
+- Business Intelligence (BI): market analysis, sales and revenue optimization, supply chain optimization
+- Healthcare: Patient data, drug discovery, healthcare fraud detection
+- Finance: algorithmic trading, risk management
+- Manufacturing & Operations: quality control, predictive maintenance
+
+*Data Analytics Process*
+1. Problem definition
+2. Data collection
+3. Data cleaning and preprocessing
+4. Data analysis and visualization (Descriptive Analysis)
+5. Introduction to machiine learning (Predictive Analysis)
+
+Types of data:
+- structured data:  is organized and follows a specific format, stored in relational databases or tabular format
+- semi-structured data: loosely organized
+- unstructured data: lacks specific format, includes content that doesn't fit neatly
+
+*Data Sources*
+
+*Using pandas*
+Features:
+- handling missing data
+- data grouping
+- data transformation
+- merging and joining
+
+Importing data
+use pd.read_csv or pd.read_excel
+
+Data Cleaning and preprocessing
+    raw data often contains errors, inconsistencies, missing values and noise
+    this can affect the data accuracy and effectiveness of analysis
+    Data cleaning and preprocessing
+
+
+**Introduction to Machine Learning (Predictive Analysis)**
+Machine Learning uses data and produces a program to perform a task
+Types:  - Supervised Learning = Machine learns from training data that is labeled
+        - Unsupervised Learning = Non-labeled training data
+        - Reinforcement Learning = Learns on its own, sometimes reward system is present
+                                    = have feedback to learn from output
+
+
+
+
+
+
+#------------------------CHAPTER 12-------------------------------------------------
+# Object Oriented Programming (OOP)
+
+Object Oriented Programming is a programming paradigm organized around objects
+ with data and associated functions
+
+Fundamentals
+    - Class: template for creating objects, defining properties and methods,
+                as well as default values/behavior
+    - Object: instance of a class that has a state (properties) and behaviour
+                (methods)
+    - Properties: data associated with an object: The variables.
+    - Methods: functions (behavior) defined in a class and associated with an
+                object. In other words, it is the operation.
+    - Attributes: modify behavior of classes and class components
+    - Inheritance: object or class (subclass) derived from another object or
+                class (superclass)
+    - Polymorphism: single interface to entities of different types

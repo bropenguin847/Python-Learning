@@ -1,3 +1,6 @@
+"""
+Custom library for Chapter 11, used in prompt.py
+"""
 
 import numpy as np
 import matplotlib.pyplot as plt
