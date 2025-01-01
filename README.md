@@ -111,5 +111,6 @@ How to write clean Python code<br>
 [Python explained simply](https://www.youtube.com/watch?v=x7X9w_GIm1s)
 
 [Python Full Course for Beginners by Mosh Hamedani](https://www.youtube.com/watch?v=_uQrJ0TkZlc)
+
 ---
-### Feel free to raise any issues if you found any mistakes or outdated information in this repo.
+## Feel free to raise any issues if you found any mistakes or outdated information in this repo. Have a nice journey into the world of Python
