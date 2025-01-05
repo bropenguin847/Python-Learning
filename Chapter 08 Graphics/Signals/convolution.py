@@ -2,6 +2,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 class Waveform:
+    '''
+    t1 = start
+    t2 = end
+    center = t1 - t2, center point
+    '''
     def __init__(self, time, t1, t2):
         self.time = time
         self.t1, self.t2 = t1, t2
@@ -9,6 +14,7 @@ class Waveform:
 t = np.linspace(-2, 3, 500)
 
 def graph_label(title, xlabel, ylabel):
+    '''quick code to plot figure'''
     plt.title(title)
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
@@ -36,7 +42,7 @@ for i, time in enumerate(t):
 
 # z(t) = x1(t) + x2(t)
 z = x1 + x2
-
+# y(t) = x1(t) * x2(t)
 y = np.convolve(x1, x2, mode='full') / 100    # Adjust for sampling rate by dividing 100
 t_conv = np.linspace(triangle.time[0] + square.time[0], triangle.time[-1] + square.time[-1], len(y))
 
@@ -75,7 +81,7 @@ for i, time in enumerate(slant.time):
         g[i] = 1 * (time +1)
     else:
         g[i] = 0
-      
+
 # Define square
 square1 = Waveform(t, -1, 0)
 square2 = Waveform(t, 1, 2)
@@ -83,13 +89,12 @@ square2 = Waveform(t, 1, 2)
 for i, time in enumerate(t):
     if square1.t1 <= time <= square1.t2:
         h[i] = 2
-        
     if square2.t1 <= time <= square2.t2:
         h[i] = 1
 
-# zt = gt + ht
+# z(t) = g(t) + h(t)
 z = g + h
-        
+# yt = g(t) * h(t)
 y = np.convolve(g, h, mode='full') / 100    # Adjust for sampling rate by dividing 100
 t_conv = np.linspace(square1.time[0] + slant.time[0], square2.time[-1] + slant.time[-1], len(y))
 
