@@ -1,3 +1,10 @@
+"""
+Assignment for Signal & System. Originally coded using Matlab.
+This file consists of the same answers but in Python.
+Numpy library is used for zeroing an array, while matplotlib.pyplot
+is for plotting the figures.
+"""
+
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -14,7 +21,9 @@ class Waveform:
 t = np.linspace(-2, 3, 500)
 
 def graph_label(title, xlabel, ylabel):
-    '''quick code to plot figure'''
+    '''
+    Quick code to plot figure. Grid always on.
+    '''
     plt.title(title)
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
