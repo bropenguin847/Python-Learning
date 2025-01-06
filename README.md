@@ -99,7 +99,7 @@ Cheatsheet for subscripting and operator precedence
 
 All the colors for matplotlib<br>
 [Simple matplotlib markers, line style and color](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html)<br>
-[🔴🔵🟡matplotlib colors🟢🟠🟣](https://i.sstatic.net/lFZum.png)<br>
+[🔴🔵🟡matplotlib colors🟢🟠🟣](https://matplotlib.org/stable/gallery/color/named_colors.html#css-colors)<br>
 
 How to write clean Python code<br>
 [Pep8 Style Guide for Python Code](https://pep8.org/)<br>
