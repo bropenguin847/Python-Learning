@@ -1,3 +1,7 @@
+"""
+Detecting outlier using IQR. IQR stands for interquartile range.
+"""
+
 import pandas as pd
 # Use IQR to detect outlier
 
