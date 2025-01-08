@@ -55,7 +55,7 @@ All the folders labeled with Chapter contain scripts for each chapter. Some have
 Some Python files are combined together to reduce clutter and because the codes are very similar.
 Such as example1&2 are combination of example1 and example2 in Chapter 4.
 
-In Chapter 8, the folder 'Signals' is for Signals and System course. It's a requirement for my assignment, the code is an alternative to plotting graphs using MatLab.
+In Chapter 8, the folder 'Signals' is for Signals and System course. It's an assignment, the code is an alternative to plotting graphs using MatLab. However, a MatLab version of the code is also available.
 
 Chapter 7 (Debugging) and Chapter 12 (OOP) is not included in this repo, but I will try to find the notes for both of those chapter.
 
@@ -104,6 +104,8 @@ All the colors for matplotlib<br>
 How to write clean Python code<br>
 [Pep8 Style Guide for Python Code](https://pep8.org/)<br>
 
+[Python SpeedSheet](https://speedsheet.io/s/python)
+
 ---
 # For beginners / Helpful Links
 [CS50 Introduction to Python](https://www.youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V)
@@ -112,5 +114,7 @@ How to write clean Python code<br>
 
 [Python Full Course for Beginners by Mosh Hamedani](https://www.youtube.com/watch?v=_uQrJ0TkZlc)
 
+[Online Python Interpreter](https://www.onlinegdb.com/online_python_compiler)
 ---
-## Feel free to raise any issues if you found any mistakes or outdated information in this repo. Have a nice journey into the world of Python
+## Feel free to raise any issues if you found any mistakes or outdated information in this repo. Have a nice journey into the world of Python. All the best ᯓ★!!
+### *ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚
