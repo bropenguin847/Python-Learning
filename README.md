@@ -95,10 +95,10 @@ python -m pip install scipy
 ---
 # Appendix 📌
 Cheatsheet for subscripting and operator precedence
-![subscripting](appendix1.png)<br>
-![operator precedence](appendix2.png)<br>
-![Special Character](special_character.png)
-![Unicode for symbol](unicode_symbol.png)
+<img src="appendix1.png" width="800" height="600" alt="subscripting"><br>
+<img src="appendix2.png" width="700" height="700" alt="operator precedence"><br>
+<img src="special_character.png" width="600" height="400" alt="Special Character"><br>
+<img src="unicode_symbol.png" width="600" height="400" alt="Unicode Symbol"><br>
 
 
 All the colors for matplotlib<br>
