@@ -14,7 +14,7 @@ print("Quotient:", quotient)
 print("Remainder:", remainder)
 
 # Define the polynomials as vectors
-p1 = [1, 3, 0, 2]  # Represents x^3 + 3x^2 + 2
+p1 = [1, 3.5, 0, 2]  # Represents x^3 + 3/2x^2 + 2
 p2 = [1, 0, -5]    # Represents x^2 - 5
 
 # Polynomial multiplication to find f(x)

@@ -1,3 +1,18 @@
+""" Example 4
+Plenty of engineering related system can be represented with mathematical model.
+For example, polynomial.
+
+Example 4 is polynomial repersentation for motor control using PID controller.
+This controller is used to stablilize the plant H(s) (motor, acceleration, etc).
+The overall system is shown by the polymonial equation.
+
+𝑄𝑛 is denoted as numerator polynomial and 𝑄𝑑 is the denumerator polynomial.
+𝐷, 𝑃 and 𝐼 are the controller constant.
+
+This example demonstrates how to represent formula in polynomial using []
+and how to use .polymul()
+"""
+
 import numpy as np
 
 # Set P, D, and I values (Proportional, Derivative, Integral gains)

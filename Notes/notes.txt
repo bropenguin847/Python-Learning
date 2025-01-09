@@ -176,6 +176,23 @@ Functions:
 functions will return some values
 can import functions
 
+Types:
+    * Predefined:
+        - Built-in functions
+        - Library functions
+    * User defined function:
+        - Standard
+        - Local
+        - Lambda function, short and unnamed function defined with Lambda
+        - Private functions = conventionally marked with underscore for internal use
+
+        Example of lambda:
+            square = lambda x: x ** 2
+            print(square(4)) # Output: 16
+
+        Example of private functions:
+            def _private_function():
+                print("This is a private function.")
 
 
 
@@ -202,6 +219,36 @@ zip() function
     serializing and deserializing a Python object structure. It's the process of
     converting a Python object into a byte stream to store it in a file/database,
     maintain program state across sessions, or transport data over the network.
+
+
+
+#------------------------CHAPTER 9-------------------------------------------------
+# Data Interpolation
+
+from scipy.interpolate import interp1d
+
+syntax: interp1d(x, v, kind= *method*)
+vp = f(x)
+
+Method:
+    - nearest: nearest neighbor interpolation
+    - linear: Linear interpolation. Uses straight lines to connect the points.
+    - cubic: Piecewise cubic spline interpolation. Identical to spline interpolation.
+
+    Nearest & Linear require at least two points of data, while cubic requires 4
+
+Alternative way (simple interpolation)
+
+import numpy as np
+Interpolated = np.interp(new_x, ori_x, ori_y)
+
+km = np.atleast_id(km) # convert to 1D array
+km.astype(int) # ensure indices are integer
+round(input,dec_places)
+
+
+
+
 
 
 

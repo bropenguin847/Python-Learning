@@ -96,8 +96,20 @@ no function that can concatenate in numpy
 
 #7 np.round(a, decimals=0)
 
+#8 np.logspace(start, stop, num=)
+    Return numbers spaced evenly on a log scale.
 
+#9 np.abs(x) or np.absolute
+    Calculate the absolute value element-wise.
 
+#10 np.tile(A, reps)
+    Construct an array by repeating A the number of times given by reps
+
+#11 np.atleast_1d()
+    to convert any input to a 1D array
+
+#12 np.meshgrid()
+    Return a tuple of coordinate matrices from coordinate vectors
 
 
 # 

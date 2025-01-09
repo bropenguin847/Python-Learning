@@ -46,7 +46,7 @@ In the assignment folder, contains 3 tasks. All requires using Python to extract
 In all the .py file, the problem scenario's are stated on the top.
 datastat_module is a custom Python file that contains all the functions that can help out with the other files. It is essentially a custom library.
 
-For the data in Assignment, outliers and missing values have been added in the .csv files
+For the data in Assignment, outliers and missing values have been added in the .csv files.
 
 ---
 # Scripts 📝
@@ -65,7 +65,9 @@ Additional links for Debugging and OOP:<br>
 
 ---
 # Setup
-This course uses Python as its high level programming language with various libraries such as NumPy and Matplotlib, with [VSCode as IDE](https://code.visualstudio.com/download). A few setups are required when programming Python using VSCode. [Here are the steps](https://code.visualstudio.com/docs/languages/python). Users will need to manually install Python and the [libraries](#libraries-) as well.
+This course uses Python as its high level programming language with various libraries such as NumPy and Matplotlib, with [VSCode as IDE](https://code.visualstudio.com/download).
+A few setups are required when programming Python using VSCode. [Here are the steps](https://code.visualstudio.com/docs/languages/python).
+Users will need to manually install Python and the [libraries](#libraries-) as well.
 
 Alternatively, [SpyderIDE](https://www.spyder-ide.org/) can be used. Spyder IDE offers an integrated environment combining an editor, console, and variable explorer, making it ideal for scientific computing. It supports data visualization, efficient debugging, and preinstalled with libraries like NumPy, Pandas, and Matplotlib.
 
@@ -85,26 +87,28 @@ python -m pip install matplotlib
 python -m pip install pandas
 python -m pip install scipy
 ```
-[🎲NumPy documentation](https://numpy.org/doc/stable/user/absolute_beginners.html)<br>
-[📈MatPlotLib documentation](https://matplotlib.org/stable/index.html)<br>
-[🐼Pandas Documentation](https://pandas.pydata.org/docs/index.html)<br>
-[🐍SciPy Documentation](https://docs.scipy.org/doc/scipy/tutorial/index.html#user-guide)<br>
+[🎲 NumPy documentation](https://numpy.org/doc/stable/user/absolute_beginners.html)<br>
+[📈 MatPlotLib documentation](https://matplotlib.org/stable/index.html)<br>
+[🐼 Pandas Documentation](https://pandas.pydata.org/docs/index.html)<br>
+[🐍 SciPy Documentation](https://docs.scipy.org/doc/scipy/tutorial/index.html#user-guide)<br>
 
 ---
 # Appendix 📌
 Cheatsheet for subscripting and operator precedence
 ![subscripting](appendix1.png)<br>
 ![operator precedence](appendix2.png)<br>
+![Special Character](special_character.png)
+![Unicode for symbol](unicode_symbol.png)
 
 
 All the colors for matplotlib<br>
 [Simple matplotlib markers, line style and color](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html)<br>
 [🔴🔵🟡matplotlib colors🟢🟠🟣](https://matplotlib.org/stable/gallery/color/named_colors.html#css-colors)<br>
 
+[Python SpeedSheet](https://speedsheet.io/s/python)<br>
+
 How to write clean Python code<br>
 [Pep8 Style Guide for Python Code](https://pep8.org/)<br>
-
-[Python SpeedSheet](https://speedsheet.io/s/python)
 
 ---
 # For beginners / Helpful Links
@@ -114,7 +118,22 @@ How to write clean Python code<br>
 
 [Python Full Course for Beginners by Mosh Hamedani](https://www.youtube.com/watch?v=_uQrJ0TkZlc)
 
+[Python in 1 hour by Mosh Hamedani](https://www.youtube.com/watch?v=kqtD5dpn9C8)
+
 [Online Python Interpreter](https://www.onlinegdb.com/online_python_compiler)
+
+[Python Online Game Tutorial Playlist](https://www.youtube.com/playlist?list=PLzMcBGfZo4-kR7Rh-7JCVDN8lm3Utumvq)
+
+[Data Analysis with Python Full Course](https://www.youtube.com/watch?v=r-uOLxNrNk8)
+
+
+
+[Awesome ChatGPT prompts](https://github.com/f/awesome-chatgpt-prompts)
+
+[ChatPGT prompts for writing and generating codes](https://dev.to/techiesdiary/chatgpt-prompts-for-writing-and-generating-codes-59kf)
+
+[A Comprehensive Guide to Using ChatGPT Prompts for Coding Tasks](https://www.learnprompt.org/chat-gpt-prompts-for-coding/)
 ---
 ## Feel free to raise any issues if you found any mistakes or outdated information in this repo. Have a nice journey into the world of Python. All the best ᯓ★!!
 ### *ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚
+!need to make custom pdf for each chapter

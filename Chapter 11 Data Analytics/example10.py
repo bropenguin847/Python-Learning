@@ -1,6 +1,6 @@
 """
-scipy library is not used, put here as an example
-for another library that have interpolate function
+scipy library is not used, put here as an
+example for another library that have interpolate function
 """
 
 import numpy as np

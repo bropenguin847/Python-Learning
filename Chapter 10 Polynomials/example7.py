@@ -1,3 +1,7 @@
+""" Example 7
+roots are all values that will return f(x) = 0
+"""
+
 import numpy as np
 
 # Define the polynomial coefficients for f(x) = x^3 + x^2 - 4x - 4

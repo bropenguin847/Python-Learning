@@ -1,3 +1,9 @@
+"""
+This is related to example 6
+To understand the system, the poly is evaluated over a range of s values.
+Lastly, matplotlib.pyplot is used to plot a graph for visualizing system response.
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 

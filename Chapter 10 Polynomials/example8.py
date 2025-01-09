@@ -13,6 +13,13 @@ p = [g/2, v, 0]
 r = np.roots(p)
 
 # The time when the object hits the ground (non-zero root)
+'''
+This code below filters the roots to exclude 0,
+assuming zero is not a valid solution for the specific problem.
+[r != 0] is a boolean mask that is true for non-zero roots
+r[r != 0]: Applies the mask to the array r, returning only the non-zero roots.
+[0]: Selects the first non-zero root from the filtered array.
+'''
 tground = r[r != 0][0]
 
 # Generate time values from 0 to tground

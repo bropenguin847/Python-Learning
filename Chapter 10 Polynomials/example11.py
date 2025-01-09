@@ -32,9 +32,12 @@ usage_predict_2nd_order = np.polyval(p2, months_predict)
 usage_predict_3rd_order = np.polyval(p3, months_predict)
 
 # Display the predictions for months 7, 8, and 9
-print(f"Predicted internet usage (hours) for months 7, 8, 9 (1st Order Polynomial): {usage_predict_1st_order}")
-print(f"Predicted internet usage (hours) for months 7, 8, 9 (2nd Order Polynomial): {usage_predict_2nd_order}")
-print(f"Predicted internet usage (hours) for months 7, 8, 9 (3rd Order Polynomial): {usage_predict_3rd_order}")
+print(f"Predicted internet usage (hours) for months 7, 8, 9 (1st Order Polynomial): 
+      {usage_predict_1st_order}")
+print(f"Predicted internet usage (hours) for months 7, 8, 9 (2nd Order Polynomial): 
+      {usage_predict_2nd_order}")
+print(f"Predicted internet usage (hours) for months 7, 8, 9 (3rd Order Polynomial): 
+      {usage_predict_3rd_order}")
 
 # Plot the original data and the polynomial fits
 plt.plot(months, data.T, 'o', label='Original Data')  # Transpose data to match months
