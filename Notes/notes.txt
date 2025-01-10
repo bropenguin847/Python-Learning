@@ -172,7 +172,7 @@ Converting for loop > while loop:
 
 
 #------------------------CHAPTER 5-------------------------------------------------
-Functions:
+                    ## Functions ##
 functions will return some values
 can import functions
 
@@ -197,9 +197,7 @@ Types:
 
 
 #------------------------CHAPTER 6-------------------------------------------------
-input and output functions
-zip() function
- - combine two or more iterables element wise
+                    ## Input & Output ##
 
 # degree_start = float(input("What starting value of degree: "))
 # degree_final = float(input("What final value of degree: "))
@@ -214,28 +212,68 @@ zip() function
 #     print(f'{d:6.2f}° {r:10.4f}π')
 #################################################################################################
 
- import and export data in python
- Pickle in Python:
-    serializing and deserializing a Python object structure. It's the process of
-    converting a Python object into a byte stream to store it in a file/database,
-    maintain program state across sessions, or transport data over the network.
+Pickle in Python:
+    serializing and deserializing a Python object structure (such as list/dictionary).
+    It's the process of converting a Python object into a byte stream to
+    store it in a file/database, maintain program state across sessions,
+     or transport data over the network.
 
+Using f-string:
+    To create an f-string, prefix the string with the letter “ f ”. F-strings provide a
+    concise and easy way to put Python expressions inside string for formatting.
+    Example: f'string here {variable:type}'
+    the type can be:    .d = decimal
+                        .s = string
+                        m.nf = float, m = width, n = flaoting points
+                        .e / .E = scientific notation
+
+Using  \ to break a char:
+    \n = newline
+    \a = alarm
+    \r = carriage return
+    \t = tab
+    \xNN = unicode (hex NN)
+    \uNNNN = unicode (4 digit)
+    \b = backspace
+
+zip() function
+    - combine two or more iterables element wise
+    - creates pairs of elements from each iterable
+
+#------------------------CHAPTER 8-------------------------------------------------
+                    ## Graphics ##
+
+Box Plot 
+- displays median, quartile and potential outlier
+plt.boxplot(x, y, notch= Boolean, vert= Boolean)
+    To create a notched boxplot, which will notch around median, notch=True
+    To create a horizontol boxplot, vert=False
+
+Histogram
+- a graph showing frequency distributions.
+plt.hist(x)
 
 
 #------------------------CHAPTER 9-------------------------------------------------
-# Data Interpolation
+                 ## Data Interpolation ##
 
 from scipy.interpolate import interp1d
+- returns a function whose call method uses interpolation to find the value of new points
+syntax:
+    f = interp1d(x, y, kind= "method")
+    # generate xnew here
+    ynew = f(xnew)
 
-syntax: interp1d(x, v, kind= *method*)
-vp = f(x)
-
-Method:
-    - nearest: nearest neighbor interpolation
-    - linear: Linear interpolation. Uses straight lines to connect the points.
-    - cubic: Piecewise cubic spline interpolation. Identical to spline interpolation.
-
-    Nearest & Linear require at least two points of data, while cubic requires 4
+    x = sample points (array-like)
+    y = corresponding values at sample points (array-like)
+    f = function that can find new value
+    xnew = new points on x-axis
+    ynew = new points on y-axis, interpolated with xnew
+    Method:
+        - nearest: nearest neighbor interpolation
+        - linear: Linear interpolation. Uses straight lines to connect the points.
+        - cubic: Piecewise cubic spline interpolation. Identical to spline interpolation.
+        * Nearest & Linear require at least two points of data, while cubic requires 4
 
 Alternative way (simple interpolation)
 
@@ -248,14 +286,8 @@ round(input,dec_places)
 
 
 
-
-
-
-
-
-
 #------------------------CHAPTER 10-------------------------------------------------
-# Polynomials
+                    ## Polynomials ##
 
 With each polynomial, there is a vector representation for it.
 starting with the highest power, then slowly getting to x^0
@@ -269,7 +301,7 @@ n of degree just up to 2
 
 
 #------------------------CHAPTER 11-------------------------------------------------
-# Intro to Data Analytics
+                    ## Intro to Data Analytics ##
 
 Aim: Use basic statistical function, understand data analytical process, apply data analysis
 

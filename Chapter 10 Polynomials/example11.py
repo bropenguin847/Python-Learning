@@ -1,9 +1,14 @@
+"""
+Chapter 10 Example 11
+"""
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
 # Load the data from the provided Excel file, skipping the first row of labels
-file_path = 'internetusage.xlsx'  # Ensure the file is in the same directory or adjust the path accordingly
+# Ensure the file is in the same directory or adjust the path accordingly
+file_path = 'internetusage.xlsx'
 df = pd.read_excel(file_path, skiprows=1)
 
 # Extracting the usage data (rows are persons, columns are months)
@@ -32,12 +37,12 @@ usage_predict_2nd_order = np.polyval(p2, months_predict)
 usage_predict_3rd_order = np.polyval(p3, months_predict)
 
 # Display the predictions for months 7, 8, and 9
-print(f"Predicted internet usage (hours) for months 7, 8, 9 (1st Order Polynomial): 
-      {usage_predict_1st_order}")
-print(f"Predicted internet usage (hours) for months 7, 8, 9 (2nd Order Polynomial): 
-      {usage_predict_2nd_order}")
-print(f"Predicted internet usage (hours) for months 7, 8, 9 (3rd Order Polynomial): 
-      {usage_predict_3rd_order}")
+print(f"""Predicted internet usage (hours) for months
+       7, 8, 9 (1st Order Polynomial): {usage_predict_1st_order}""")
+print(f"""Predicted internet usage (hours) for months
+      7, 8, 9 (2nd Order Polynomial): {usage_predict_2nd_order}""")
+print(f"""Predicted internet usage (hours) for months
+      7, 8, 9 (3rd Order Polynomial): {usage_predict_3rd_order}""")
 
 # Plot the original data and the polynomial fits
 plt.plot(months, data.T, 'o', label='Original Data')  # Transpose data to match months
@@ -46,16 +51,16 @@ plt.plot(months, average2, '-.b', label='2nd Degree Fit')
 plt.plot(months, average3, '-r', label='3rd Degree Fit')
 
 # Plot the predictions for months 7, 8, and 9
-plt.plot(np.concatenate([months, months_predict]), 
-         np.concatenate([average1, usage_predict_1st_order]), 
+plt.plot(np.concatenate([months, months_predict]),
+         np.concatenate([average1, usage_predict_1st_order]),
          'k--', label='1st Degree Prediction', alpha=0.6)  # Semi-transparent for prediction
 
-plt.plot(np.concatenate([months, months_predict]), 
-         np.concatenate([average2, usage_predict_2nd_order]), 
+plt.plot(np.concatenate([months, months_predict]),
+         np.concatenate([average2, usage_predict_2nd_order]),
          'b-.', label='2nd Degree Prediction', alpha=0.6)  # Dot-dash6 line for prediction
 
-plt.plot(np.concatenate([months, months_predict]), 
-         np.concatenate([average3, usage_predict_3rd_order]), 
+plt.plot(np.concatenate([months, months_predict]),
+         np.concatenate([average3, usage_predict_3rd_order]),
          'r--', label='3rd Degree Prediction', alpha=0.6)  # Dashed line for prediction
 
 # Adjust title, labels, and grid

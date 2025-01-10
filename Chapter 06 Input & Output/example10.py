@@ -1,5 +1,5 @@
 """
-Chapter 6 Example 9 & 12
+Chapter 6 Example 10
 """
 
 # Writing to a text file

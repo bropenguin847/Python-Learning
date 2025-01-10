@@ -40,8 +40,46 @@ predictions.
 '''
 
 import pandas as pd
-
+import matplotlib.pyplot as plt
 
 # Task 1
+# Data
+days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+cars_sold = [3, 4, 5, 3, 7, 6, 4]  # Number of cars sold each day
 
+# Generate stacked "x" markers for each day
+for i, count in enumerate(cars_sold):
+    plt.scatter([i] * count, range(1, count + 1), marker='x', color='black')
+
+# Customize the plot
+plt.xticks(range(len(days)), days)  # Set x-axis labels
+plt.yticks([])  # Remove y-axis labels
+plt.title("Number of Cars Sold")
+plt.xlabel("Days")
+plt.ylabel("Number of Cars")
+
+# Show the plot
+plt.show()
 # Task 2
+
+
+
+
+
+
+# stats = {}
+# for i in range(1, 4):
+#     city = city_list[i]
+#     stats[i] = {
+#         'temperature': {
+#             'mean': df[f'temperature_city{i}'].mean(),
+#             'median': df[f'temperature_city{i}'].median(),
+#             'std': df[f'temperature_city{i}'].std()
+#         },
+#         'precipitation': {
+#             'mean': df[f'precipitation_city{i}'].mean(),
+#             'median': df[f'precipitation_city{i}'].median(),
+#             'std': df[f'precipitation_city{i}'].std()
+#         }
+#     }
+# stats_df = pd.DataFrame(stats)

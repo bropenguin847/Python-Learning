@@ -28,19 +28,19 @@ I would like to keep this as my way of learning how to maintain a repo, make doc
 In the future, perhaps I will make a wiki page for all the shortcuts to learn Python.
 
 ---
-# [**Notes** ✍️](https://github.com/bropenguin847/Python-Learning/tree/main/Notes)
+## [**Notes** ✍️](https://github.com/bropenguin847/Python-Learning/tree/main/Notes)
 Contains notes for each chapter. Notes will be continually updated.
 For array notes, contain specific notes regarding numpy arrays, numpy functions and so on.
 Further references can be found in the appendix.
 
 ---
-# [Exercises ᕙ(  •̀ ᗜ •́  )ᕗ](https://github.com/bropenguin847/Python-Learning/tree/main/exercises)
+## [Exercises ᕙ(  •̀ ᗜ •́  )ᕗ](https://github.com/bropenguin847/Python-Learning/tree/main/exercises)
 In exercises folder, contain exercises for python, such as array manipulation, bubble sort 
 and mistakes that I have made during my tests
 (regretting life)
 
 ---
-# [Assignment 📚](https://github.com/bropenguin847/Python-Learning/tree/main/Assignment)
+## [Assignment 📚](https://github.com/bropenguin847/Python-Learning/tree/main/Assignment)
 In the assignment folder, contains 3 tasks. All requires using Python to extract data from csv file using Python libraries such as Pandas.
 
 In all the .py file, the problem scenario's are stated on the top.
@@ -49,7 +49,11 @@ datastat_module is a custom Python file that contains all the functions that can
 For the data in Assignment, outliers and missing values have been added in the .csv files.
 
 ---
-# Scripts 📝
+## [Quiz](https://github.com/bropenguin847/Python-Learning/tree/main/Quiz)
+In this folder, There are several questions from my quiz in class. Quiz 1 and Quiz 2 are very similar, with almost same way to solve the problems, just using different datas. A good way to learn how to read xlsx file using python and plot graphs.
+
+---
+## Scripts 📝
 All the folders labeled with Chapter contain scripts for each chapter. Some have xlsx or csv files used as data. Feel free to try it out.
 
 Some Python files are combined together to reduce clutter and because the codes are very similar.
@@ -64,7 +68,7 @@ Additional links for Debugging and OOP:<br>
 [OOP](https://www.youtube.com/watch?v=JeznW_7DlB0)<br>
 
 ---
-# Setup
+## Setup
 This course uses Python as its high level programming language with various libraries such as NumPy and Matplotlib, with [VSCode as IDE](https://code.visualstudio.com/download).
 A few setups are required when programming Python using VSCode. [Here are the steps](https://code.visualstudio.com/docs/languages/python).
 Users will need to manually install Python and the [libraries](#libraries-) as well.
@@ -86,7 +90,7 @@ To create an interactive notebook, create a file that ends with ".ipynb"
 ### Pick your poison and learn Python ( ◡̀_◡́)ᕤ
 
 ---
-# Libraries 📖
+## Libraries 📖
 Numpy, Matplotlib, Pandas & SciPy. With links for official documentation.
 ```python
 python -m pip install numpy
@@ -100,12 +104,12 @@ python -m pip install scipy
 [🐍 SciPy Documentation](https://docs.scipy.org/doc/scipy/tutorial/index.html#user-guide)<br>
 
 ---
-# Appendix 📌
+## Appendix 📌
 Cheatsheet for subscripting and operator precedence
-<img src="appendix1.png" width="800" height="600" alt="subscripting"><br>
-<img src="appendix2.png" width="700" height="700" alt="operator precedence"><br>
-<img src="special_character.png" width="600" height="400" alt="Special Character"><br>
-<img src="unicode_symbol.png" width="600" height="400" alt="Unicode Symbol"><br>
+<img src="images\appendix1.png" width="750" height="550" alt="subscripting"><br>
+<img src="images\appendix2.png" width="700" height="700" alt="operator precedence"><br>
+<img src="images\special_character.png" width="600" height="400" alt="Special Character"><br>
+<img src="images\unicode_symbol.png" width="600" height="400" alt="Unicode Symbol"><br>
 
 
 All the colors for matplotlib<br>
@@ -118,7 +122,7 @@ How to write clean Python code<br>
 [Pep8 Style Guide for Python Code](https://pep8.org/)<br>
 
 ---
-# For beginners / Helpful Links
+## For beginners / Helpful Links
 [CS50 Introduction to Python](https://www.youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V)
 
 [Python explained simply](https://www.youtube.com/watch?v=x7X9w_GIm1s)
@@ -134,12 +138,13 @@ How to write clean Python code<br>
 [Data Analysis with Python Full Course](https://www.youtube.com/watch?v=r-uOLxNrNk8)<br>
 
 
-
+<br>
 [Awesome ChatGPT prompts](https://github.com/f/awesome-chatgpt-prompts)
 
 [ChatPGT prompts for writing and generating codes](https://dev.to/techiesdiary/chatgpt-prompts-for-writing-and-generating-codes-59kf)
 
-[A Comprehensive Guide to Using ChatGPT Prompts for Coding Tasks](https://www.learnprompt.org/chat-gpt-prompts-for-coding/)
+### [A Comprehensive Guide to Using ChatGPT Prompts for Coding Tasks](https://www.learnprompt.org/chat-gpt-prompts-for-coding/)
+
 ---
 ## Feel free to raise any issues if you found any mistakes or outdated information in this repo. Have a nice journey into the world of Python. All the best ᯓ★!!
 ### *ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚

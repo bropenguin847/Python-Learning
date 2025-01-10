@@ -1,6 +1,4 @@
 """
-Team Connecting....
-
 A1
 Problem Statement:
 A1_dataset.csv records the monthly temperatures and precipitacion levels of three cities over
@@ -11,7 +9,7 @@ knowledge of scientific programming.
 
 Task 1: Data Cleaning Process
 a) Inspect the dataset for missing values and outliers. Document the number of missing
-values and outline your strategy for handling them using Python libraries such as pandas.
+values. Outline strategy for handling them using Python libraries such as pandas.
 b) Implement the cleaning steps in Python, including filling missing values using appropriate
 techniques (mean, median, or interpolation) and removing or handling outliers.
 
@@ -36,7 +34,7 @@ steps.
 b) Evaluate the performance of your model using metrics such as R-squared or mean absolute
 error (MAE). What do these metrics indicate about the model's predictive accuracy?
 """
-
+#%%
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -46,19 +44,11 @@ df = pd.read_csv('A1_dataset.csv')
 city_list = list(df.columns)
 df_range = df.shape[0]      # 60
 df_size = df.shape[1]       # 7
-
 month = df['month']
-temp_city1 = df['temperature_city1'].values
-temp_city2 = df['temperature_city2'].values
-temp_city3 = df['temperature_city3'].values
-preci_city1 = df['precipitation_city1'].values
-preci_city2 = df['precipitation_city2'].values
-preci_city3 = df['precipitation_city3'].values
+time = range(df_range)
 
 color_list = ['forestgreen', 'dodgerblue', 'darkorchid',
-              'firebrick', 'mediumseagreen', 'darkmagenta']
-print(df.describe())
-
+              'firebrick', 'mediumseagreen', 'darkmagenta', 'fuchsia']
 
 # Task 1 : Data Cleaning
 # 1a: Finding missing values & outliers
@@ -78,57 +68,94 @@ for i in range(1, df_size):
     upper_bound = Q3 +1.5 * IQR
     if i < 4:
         df[f'Outlier Temperature City {i}'] = (df[data] < lower_bound) | (df[data] > upper_bound)
-    else:
-        df[f'Outlier Precipitation City {i-3}'] = (df[data] < lower_bound) | (df[data] > upper_bound)
-print(df)
+        df[f'Outlier Precipitation City {i}'] = (df[data] < lower_bound) | (df[data] > upper_bound)
 
-# 1b: Handling outliers / missing values
+# 1b: Handling outliers / Missing values
 # Missing values can be filled using linear interpolation
 
-#%%
-F = np.copy(temp_city1)
-nans = np.isnan(temp_city1)
-# F[nans] = np.interp(df_range[nans], df_range[~nans], temp_city1[~nans])
+# Create dictionary to store all the values of temperature and precipitation
+# Since there is only three cities, the range will be from 1 to 3
+temp_cities = {f'temp_city{i}': df[f'temperature_city{i}'].values for i in range(1, 4)}
+preci_cities = {f'preci_city{i}': df[f'precipitation_city{i}'].values for i in range(1,4)}
+
+# Get x points for interpolation range
+x_points = np.arange(df_range)
+
+# Interpolate all 3 cities for temperature
+for city in temp_cities:
+    data = temp_cities[city]
+    valid = ~np.isnan(data)
+    missing = np.isnan(data)
+
+    temp_cities[city][missing] = np.interp(x_points[missing], x_points[valid], data[valid])
+
+# Interpolate all 3 cities for precipitation
+for city in preci_cities:
+    data = preci_cities[city]
+    valid = ~np.isnan(data)
+    missing = np.isnan(data)
+
+    preci_cities[city][missing] = np.interp(x_points[missing], x_points[valid], data[valid])
+
+# Remove outliers
+############# filtered_data = data[(data >= lower_bound) & (data <= upper_bound)]
 
 # Task 2 : Data Analysis
 # 2a: Finding mean, median and standard deviation, give summary of each city
 # 2b: Analyze the relationship between temperature and precipitation (with correlation coefficient)
 
-# Use library to fill in stats of city, such as mean, median and std deviation
-stats = {}
-
-for i in range(1, 4):
-    city = city_list[i]
-    stats[i] = {
-        'temperature': {
-            'mean': df[f'temperature_city{i}'].mean(),
-            'median': df[f'temperature_city{i}'].median(),
-            'std': df[f'temperature_city{i}'].std()
-        },
-        'precipitation': {
-            'mean': df[f'precipitation_city{i}'].mean(),
-            'median': df[f'precipitation_city{i}'].median(),
-            'std': df[f'precipitation_city{i}'].std()
-        }
+# Use library to fill in stats for each city, such as mean, median and std deviation
+city1= {
+    'temperature': {
+        'mean': df['temperature_city1'].mean(),
+        'median': df['temperature_city1'].median(),
+        'std': df['temperature_city1'].std()
+    },
+    'precipitation':{
+        'mean': df['precipitation_city1'].mean(),
+        'median': df['precipitation_city1'].median(),
+        'std': df['precipitation_city1'].std()
     }
-stats_df = pd.DataFrame(stats)
-# temp_mean = df['temperature_city1'].mean()
-# temp_median = df['temperature_city1'].median()
-# temp_std = df['temperature_city1'].std()
-# preci_mean= df['precipitation_city1'].mean()
-# preci_median = df['precipitation_city1'].median()
-# preci_std= df['precipitation_city1'].std()
+}
+stats_city1 = pd.DataFrame(city1)
 
-# Fill up with mean, median and std deviation of temperature and precipitation
-# temp_city1 = [temp_mean, temp_median, temp_std]
-# preci_city1 = [preci_mean, preci_median, preci_std]
+city2= {
+    'temperature': {
+        'mean': df['temperature_city2'].mean(),
+        'median': df['temperature_city2'].median(),
+        'std': df['temperature_city2'].std()
+    },
+    'precipitation':{
+        'mean': df['precipitation_city2'].mean(),
+        'median': df['precipitation_city2'].median(),
+        'std': df['precipitation_city2'].std()
+    }
+}
+stats_city2 = pd.DataFrame(city2)
 
-# print(temp_city1)
-# print(preci_city1)
-
+city3= {
+    'temperature': {
+        'mean': df['temperature_city3'].mean(),
+        'median': df['temperature_city3'].median(),
+        'std': df['temperature_city3'].std()
+    },
+    'precipitation':{
+        'mean': df['precipitation_city3'].mean(),
+        'median': df['precipitation_city3'].median(),
+        'std': df['precipitation_city3'].std()
+    }
+}
+stats_city3 = pd.DataFrame(city3)
 
 # Task 3
 # 3a: Create graphs for temperature and precipitations over time for each city
+for i in range(1, 4):
+    plt.plot(time, temp_cities[f'temp_city{i}'], color='midnightblue', marker='x', label='Temperature')
+    plt.plot(time, preci_cities[f'preci_city{i}'], color='maroon', marker='o', label='Precipitation')
+    plt.title(f'Temperature & Precipitation City {i}')
+    plt.legend(loc='upper left')
+    plt.show()
+
 # 3b: Create comparative plot (multi-line chart) to illustrate trends
 
 # Create subplots (top: original data with NaN values, bottom: data after filling NaN values)
@@ -151,3 +178,5 @@ stats_df = pd.DataFrame(stats)
 
 # linear regression: predicting output variable based on the relationship
 # between the input and output variables
+
+# %%

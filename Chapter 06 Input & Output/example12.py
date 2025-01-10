@@ -16,7 +16,7 @@ tempC = pd.read_excel(file_path, sheet_name='Sheet1', header=None).iloc[1, 1:]
 
 # Convert Celsius to Fahrenheit
 tempF = tempC * 9/5 + 32
- 
+
 # Display results
 print("Celsius to Fahrenheit Conversion:")
 for c, f in zip(tempC, tempF):
