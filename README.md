@@ -69,6 +69,8 @@ This course uses Python as its high level programming language with various libr
 A few setups are required when programming Python using VSCode. [Here are the steps](https://code.visualstudio.com/docs/languages/python).
 Users will need to manually install Python and the [libraries](#libraries-) as well.
 
+[Enable variable explorer in VSCode](https://stackoverflow.com/questions/69240557/does-vs-code-have-variable-explorer-object-like-we-have-it-in-spyder)
+
 Alternatively, [SpyderIDE](https://www.spyder-ide.org/) can be used. Spyder IDE offers an integrated environment combining an editor, console, and variable explorer, making it ideal for scientific computing. It supports data visualization, efficient debugging, and preinstalled with libraries like NumPy, Pandas, and Matplotlib.
 
 |IDE|Advantages|Disadvantages|
@@ -76,7 +78,12 @@ Alternatively, [SpyderIDE](https://www.spyder-ide.org/) can be used. Spyder IDE 
 |VSCode|Vast library of extensions, built-in version control, versatile for various programming languages|Steep learning curve, manual setup for each language|
 |Spyder|Strong focus on scientific programming, integrated variable explorer and plotter, easy to use|Limited extensions, less versatile|
 
-### Pick your poison and learn Python
+
+Every Python file is saved in .py file format. Conventionally, Python files follow the camel_case naming style.<br>
+Use #%% to create seperate cells in code to run them individually.
+To create an interactive notebook, create a file that ends with ".ipynb"
+
+### Pick your poison and learn Python ( ◡̀_◡́)ᕤ
 
 ---
 # Libraries 📖
@@ -124,7 +131,7 @@ How to write clean Python code<br>
 
 [Python Online Game Tutorial Playlist](https://www.youtube.com/playlist?list=PLzMcBGfZo4-kR7Rh-7JCVDN8lm3Utumvq)
 
-[Data Analysis with Python Full Course](https://www.youtube.com/watch?v=r-uOLxNrNk8)
+[Data Analysis with Python Full Course](https://www.youtube.com/watch?v=r-uOLxNrNk8)<br>
 
 
 

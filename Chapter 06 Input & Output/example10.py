@@ -1,17 +1,21 @@
-""" Chapter 6 Example 10
-using pickle
+"""
+Chapter 6 Example 9 & 12
 """
 
-import pickle 
+# Writing to a text file
+with open('example.txt', 'w') as file:
+    file.write('Hello, World!')
 
-# Saving an object to a binary file
-data = {'key': 'value', 'bit': 'byte'}
-with open('data.pkl', 'wb') as file:
-	pickle.dump(data, file)
+# Reading from a text file 
+with open('example.txt', 'r') as file:
+    content = file.read()
+    print(content) # Output: Hello, World!
 
-# Loading an object from a binary file
-with open('data.pkl', 'rb') as file:
-	loaded_data = pickle.load(file)
-	print(loaded_data) # Output: {'key': 'value'}
+# Writing binary data to a file
+with open('binaryfile.bin', 'wb') as file:
+    file.write(b'\x01\x02\x03')
 
-# What the hell is a pickle
+# Reading binary data from a file 
+with open('binaryfile.bin', 'rb') as file:
+    binary_content = file.read()
+    print(binary_content)

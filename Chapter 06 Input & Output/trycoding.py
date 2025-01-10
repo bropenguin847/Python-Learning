@@ -1,6 +1,13 @@
-# import pandas as pd
+"""
+This is the file to use when playing around with codes from this chapter.
+You can use this file to import functions that is in the same folder.
+Use this file when you don't want to disturb the other codes and want to learn.
+"""
+
+import os
+import pandas as pd
 # import openpyxl
-# import os
+
 # current_dir = os.path.dirname(__file__)
 # employee_path = os.path.join(current_dir, 'employee_data.xlsx')
 # year = pd.read_excel(employee_path, sheet_name='Details', header=0).iloc[0:, 3]
