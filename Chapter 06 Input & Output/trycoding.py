@@ -2,55 +2,27 @@
 This is the file to use when playing around with codes from this chapter.
 You can use this file to import functions that is in the same folder.
 Use this file when you don't want to disturb the other codes and want to learn.
+
+It is also fun to try :)
 """
 
-import os
-import pandas as pd
-# import openpyxl
+import math
 
-# current_dir = os.path.dirname(__file__)
-# employee_path = os.path.join(current_dir, 'employee_data.xlsx')
-# year = pd.read_excel(employee_path, sheet_name='Details', header=0).iloc[0:, 3]
-# department=pd.read_excel(employee_path, sheet_name='Details', header=0).iloc[0:, 1]
-# length = len(year)
-# bonus_list = []
-# status_list=[]
-# def calculate_bonus():
-#     if year > 5:
-#         return salary * 0.1
-#     else:
-#         return 0.05 * salary
-    
-# def department_status():
-#     if department.strip().lower() == "sales":
-#         return "Target"
-#     else:
-#         return "Non-Target"
-# # index = 0
-# # while index < length:
-# for index in range(len(year)):
-#     year = pd.read_excel(employee_path, sheet_name='Details', header=0).iloc[index, 3]    
-#     salary = pd.read_excel(employee_path, sheet_name='Details', header=0).iloc[index, 2]
-#     department=pd.read_excel(employee_path, sheet_name='Details', header=0).iloc[index , 1]
-    
-#     bonus = calculate_bonus()
-#     status = department_status()
-#     bonus_list.append(bonus)
-#     status_list.append(status)
-#     index += 1
+# Get user input for degree range and increment
+degree_start = float(input('What starting value of degree would you like? '))
+degree_final = float(input('What final value of degree would you like? '))
+incr = float(input('What table increment would you like? '))
 
-# bonus_list.insert(0, "Bonus")
-# status_list.insert(0,"Status")
-# with pd.ExcelWriter(employee_path, engine='openpyxl', mode='a', if_sheet_exists='overlay') as writer:
-#     output_data = pd.DataFrame([bonus_list]).T
-#     output_data.to_excel(writer, sheet_name='Details', startcol=5, startrow=0, index=False, header=False)
-#     output_data_2= pd.DataFrame([status_list]).T
-#     output_data_2.to_excel(writer, sheet_name='Details', startcol=5, startrow=0, index=False, header=False)
+# Generate the degree list
+degree = [i for i in range(int(degree_start), int(degree_final) + 1, int(incr))] 
 
-a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-new_list = []
-for i in range(len(a)):
-    if a[i] % 2 == 0:
-        new_list.append(a[i])
+# Calculate corresponding radians
+radian = [deg / 180 for deg in degree] 
 
-print(new_list)
+# Display the header
+print('A table of degrees to radians')
+print(' deg°        π rad')
+
+# Print the table using formatted output and zip
+for d, r in zip(degree, radian):  
+    print(f'{d:6.2f}° {r:10.4f}π')
