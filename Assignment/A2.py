@@ -1,6 +1,5 @@
-'''
-Team Connecting....
-
+"""
+A2
 Problem Scenario:
 You are given a dataset containing monthly sales data of an e-commerce company over the past five
 years, along with data on advertising expenditure, customer reviews, and website traffic. Your task is
@@ -37,49 +36,15 @@ preprocessing steps you took.
 b) Assess the performance of your model using R-squared and Mean Squared Error (MSE).
 Discuss what these metrics indicate about the accuracy and reliability of the model’s
 predictions.
-'''
+"""
 
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 
+df = pd.read_csv('A2_dataset.csv')
+
 # Task 1
-# Data
-days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-cars_sold = [3, 4, 5, 3, 7, 6, 4]  # Number of cars sold each day
 
-# Generate stacked "x" markers for each day
-for i, count in enumerate(cars_sold):
-    plt.scatter([i] * count, range(1, count + 1), marker='x', color='black')
-
-# Customize the plot
-plt.xticks(range(len(days)), days)  # Set x-axis labels
-plt.yticks([])  # Remove y-axis labels
-plt.title("Number of Cars Sold")
-plt.xlabel("Days")
-plt.ylabel("Number of Cars")
-
-# Show the plot
-plt.show()
 # Task 2
 
-
-
-
-
-
-# stats = {}
-# for i in range(1, 4):
-#     city = city_list[i]
-#     stats[i] = {
-#         'temperature': {
-#             'mean': df[f'temperature_city{i}'].mean(),
-#             'median': df[f'temperature_city{i}'].median(),
-#             'std': df[f'temperature_city{i}'].std()
-#         },
-#         'precipitation': {
-#             'mean': df[f'precipitation_city{i}'].mean(),
-#             'median': df[f'precipitation_city{i}'].median(),
-#             'std': df[f'precipitation_city{i}'].std()
-#         }
-#     }
-# stats_df = pd.DataFrame(stats)

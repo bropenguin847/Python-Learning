@@ -34,14 +34,14 @@ steps.
 b) Evaluate the performance of your model using metrics such as R-squared or mean absolute
 error (MAE). What do these metrics indicate about the model's predictive accuracy?
 """
-#%%
+
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-# from scipy.interpolate import interp1d
 
 df = pd.read_csv('A1_dataset.csv')
-city_list = list(df.columns)
+data_list = list(df.columns)
 df_range = df.shape[0]      # 60
 df_size = df.shape[1]       # 7
 month = df['month']
@@ -56,9 +56,10 @@ null_count = df.isnull().sum()
 print('Number of missing values for each city')
 print(null_count)
 
-# using IQR method, we can find outlier based on interquartile range
+# Using IQR method, we can find outlier based on interquartile range
+# Now Outlier in each column is marked True
 for i in range(1, df_size):
-    data = city_list[i]
+    data = data_list[i]
     Q1 = df[data].quantile(0.25)
     Q3 = df[data].quantile(0.75)
     IQR = Q3 - Q1
@@ -66,13 +67,29 @@ for i in range(1, df_size):
     # Define outlier boundaries with 1.5 being the standard, the value can be tweaked
     lower_bound = Q1 -1.5 * IQR
     upper_bound = Q3 +1.5 * IQR
+
+    # Mark outlier in seperate column
     if i < 4:
         df[f'Outlier Temperature City {i}'] = (df[data] < lower_bound) | (df[data] > upper_bound)
         df[f'Outlier Precipitation City {i}'] = (df[data] < lower_bound) | (df[data] > upper_bound)
+    
+    # 1b: Handling outliers / Missing values
+    # Replace outliers with NaN using loc
+    df.loc[(df[data] < lower_bound) | (df[data] > upper_bound), data] = np.nan
+    # df[data] = df[data].where((df[data] >= lower_bound) & (df[data] <= upper_bound), np.nan)
 
-# 1b: Handling outliers / Missing values
+# Calculate the correlation coefficient for temperature and precipitation
+    if i < 4:
+        correlation = df[[f'temperature_city{i}', f'precipitation_city{i}']].corr()
+
+        if correlation.iloc[0, 1] > 0.7:
+            print(f'Strong positive correlation between temperature and precipitation in City {i}.')
+        elif correlation.iloc[0, 1] < -0.7:
+            print(f'Strong negative correlation between temperature and precipitation in City {i}.')
+        else:
+            print(f'Weak or no correlation between temperature and precipitation in City {i}.')
+
 # Missing values can be filled using linear interpolation
-
 # Create dictionary to store all the values of temperature and precipitation
 # Since there is only three cities, the range will be from 1 to 3
 temp_cities = {f'temp_city{i}': df[f'temperature_city{i}'].values for i in range(1, 4)}
@@ -80,7 +97,6 @@ preci_cities = {f'preci_city{i}': df[f'precipitation_city{i}'].values for i in r
 
 # Get x points for interpolation range
 x_points = np.arange(df_range)
-
 # Interpolate all 3 cities for temperature
 for city in temp_cities:
     data = temp_cities[city]
@@ -96,9 +112,6 @@ for city in preci_cities:
     missing = np.isnan(data)
 
     preci_cities[city][missing] = np.interp(x_points[missing], x_points[valid], data[valid])
-
-# Remove outliers
-############# filtered_data = data[(data >= lower_bound) & (data <= upper_bound)]
 
 # Task 2 : Data Analysis
 # 2a: Finding mean, median and standard deviation, give summary of each city
@@ -147,6 +160,11 @@ city3= {
 }
 stats_city3 = pd.DataFrame(city3)
 
+# Round all values to 3 decimal places
+stats_city1 = stats_city1.round(3)
+stats_city2 = stats_city2.round(3)
+stats_city3 = stats_city3.round(3)
+
 # Task 3
 # 3a: Create graphs for temperature and precipitations over time for each city
 for i in range(1, 4):
@@ -157,26 +175,72 @@ for i in range(1, 4):
     plt.show()
 
 # 3b: Create comparative plot (multi-line chart) to illustrate trends
+# Plot for temperature
+plt.figure(figsize=(10, 6))
+for i in range(1, 4):
+    plt.plot(time, temp_cities[f'temp_city{i}'], label=f'City {i}', marker='o')
 
-# Create subplots (top: original data with NaN values, bottom: data after filling NaN values)
-# fig, (temperature_plot, precipitation_plot) = plt.subplots(2, 1, figsize=(8, 8))
+plt.xlabel('Months')
+plt.ylabel('Temperature (°C)')
+plt.title('Monthly Average Temperature Comparison')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
 
+# Plot for Precipitation
+plt.figure(figsize=(10, 6))
+for i in range(1, 4):
+    plt.plot(time, preci_cities[f'preci_city{i}'], label=f'City {i}', marker='o')
 
-# for i in range(1, df_size):
-#     data = city_list[i]
-#     df.plot(x='month', y=data, color=color_list[i-1])       # add kind= to change kind of plot
-#     plt.legend(loc='lower left')
-# plt.show()
+plt.xlabel('Months')
+plt.ylabel('Precipitation')
+plt.title('Monthly Average Precipitation Comparison')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
 
-
-
-
+# Export the cleaned data to new csv
+df.to_csv('cleaned_data.csv', index=False)
 
 # Task 4 : Predictive Analysis
 # 4a: Using linear regression to predict future temperature and precipitation levels based on data
+
+# Predictor variable (temperature)
+X = df['temperature_city1'].values
+# Target variable (precipitation)
+y = df['precipitation_city1'].values
+
+# Add a column of ones to X for the bias term (intercept)
+X_b = np.c_[np.ones((X.shape[0], 1)), X]
+
+# Calculate the optimal theta (weights) using the normal equation
+theta = np.linalg.inv(X_b.T.dot(X_b)).dot(X_b.T).dot(y)
+
+# Predictions
+y_pred = X_b.dot(theta)
+
 # 4b: Evaluate model using r-squared / MAE
+
+# Calculate Mean Absolute Error (MAE)
+mae = np.mean(np.abs(y_pred - y))
+
+# Calculate R-squared
+ss_total = np.sum((y - np.mean(y))**2)
+ss_residual = np.sum((y - y_pred)**2)
+r2 = 1 - (ss_residual / ss_total)
+
+# Display the evaluation metrics
+print(f"Mean Absolute Error (MAE): {mae}")
+print(f"R-squared: {r2}")
+
+# Conclusion:
+if r2 > 0.7:
+    print("The model has a good fit with the data (R-squared > 0.7).")
+else:
+    print("The model's fit is not strong (R-squared < 0.7).")
+
 
 # linear regression: predicting output variable based on the relationship
 # between the input and output variables
-
-# %%

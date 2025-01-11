@@ -1,6 +1,5 @@
-'''
-Team Connecting....
-
+"""
+A3
 Problem Scenario:
 You are provided with a dataset containing information about university students' performance over
 the past three years. The dataset includes features such as aƩendance rate, assignment scores, study
@@ -36,11 +35,13 @@ based on aƩendance rate, study hours, and assignment scores. Provide a rational
 choice of model and describe the data preprocessing steps taken.
 b) Evaluate the predictive model using metrics such as R-squared and Mean Absolute Error
 (MAE). Discuss what these results imply about the accuracy and reliability of the model.
-'''
+"""
 
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 
-
+df = pd.read_csv('A3_dataset.csv')
 # Task 1
 
 # Task 2
