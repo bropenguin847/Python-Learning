@@ -42,6 +42,35 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 df = pd.read_csv('A3_dataset.csv')
-# Task 1
+data_list = list(df.columns)
+df_range = df.shape[0]      # 100 
+df_size = df.shape[1]       # 5
+matrix_num = df['matrix_number']
 
-# Task 2
+number = range(df_range)
+
+# Task 1
+null_count = df.isnull().sum()
+print('Number of missing values for each column')
+print(null_count)
+
+for i in range(1, df_size):
+    data = data_list[i]
+    Q1 = df[data].quantile(0.25)
+    Q3 = df[data].quantile(0.75)
+    IQR = Q3 - Q1
+
+    # Define outlier boundaries with 1.5 being the standard, the value can be tweaked
+    lower_bound = Q1 -1.5 * IQR
+    upper_bound = Q3 +1.5 * IQR
+
+    # Mark outlier in seperate column
+    df['attendance outlier'] = (df[data] < lower_bound) | (df[data] > upper_bound)
+    df['study hours outlier'] = (df[data] < lower_bound) | (df[data] > upper_bound)
+    df['assignment outlier'] = (df[data] < lower_bound) | (df[data] > upper_bound)
+    df['final exam outlier'] = (df[data] < lower_bound) | (df[data] > upper_bound)
+
+    # 1b: Handling outliers / Missing values
+    # Replace outliers with NaN using loc
+    df.loc[(df[data] < lower_bound) | (df[data] > upper_bound), data] = np.nan
+    # df[data] = df[data].where((df[data] >= lower_bound) & (df[data] <= upper_bound), np.nan)
