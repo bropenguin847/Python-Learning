@@ -21,7 +21,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Task 1
+# Task 1 Load data and fitting
 current_dir = os.path.dirname(__file__)
 file_path = os.path.join(current_dir, 'air_quality.xlsx')
 df = pd.read_excel(file_path)       # Creating dataframe
@@ -49,9 +49,8 @@ average2 = np.polyval(fit2, month_array)
 average3 = np.polyval(fit3, month_array)
 # average4 = np.polyval(fit4, month_array)
 
-# Task 2
-# Predicting for next three month_array, since index of December is 11,
-# next three month_array is 11 + 3 = 4
+# Task 2 Predicting for next three month_array
+# Since index of December is 11, next three month_array is 11 + 3 = 4
 months_predict = np.array([12, 13, 14])
 predit_order1 = np.polyval(fit1, months_predict)
 predit_order2 = np.polyval(fit2, months_predict)
@@ -72,7 +71,7 @@ plt.title('Polyfit all order')
 plt.xlabel('month_array')
 plt.show()
 
-# Task 3
+# Task 3 Get user input
 def get_input():
     """Gets integer input from user, and will prompt user if wrong input"""
     while True:
@@ -92,7 +91,7 @@ def get_input():
             print('Please enter a valid order from 1 - 4')
 order = get_input()
 
-# Task 4
+# Task 4 Plot original data and overlay
 if order == 1:
     print('Plot for polyfit order 1')
     plt.plot(months_extend, extended1, color='navy', label=f'Fitted order {order}', marker='x')
