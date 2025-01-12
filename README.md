@@ -103,6 +103,11 @@ python -m pip install scipy
 [🐼 Pandas Documentation](https://pandas.pydata.org/docs/index.html)<br>
 [🐍 SciPy Documentation](https://docs.scipy.org/doc/scipy/tutorial/index.html#user-guide)<br>
 
+[NumPy Tutorial](https://www.w3schools.com/python/numpy/default.asp)<br>
+[Matplotlib Tutorial](https://www.w3schools.com/python/matplotlib_intro.asp)<br>
+[Pandas Tutorial](https://www.w3schools.com/python/pandas/default.asp)<br>
+[SciPy Tutorial](https://www.w3schools.com/python/scipy/scipy_intro.php)<br>
+
 ---
 ## Appendix 📌
 Cheatsheet for subscripting and operator precedence
@@ -130,6 +135,12 @@ How to write clean Python code<br>
 [Python Full Course for Beginners by Mosh Hamedani](https://www.youtube.com/watch?v=_uQrJ0TkZlc)
 
 [Python in 1 hour by Mosh Hamedani](https://www.youtube.com/watch?v=kqtD5dpn9C8)
+
+[Python Beginners by NeetCode (follow-along)](https://www.youtube.com/watch?v=s3KhqPjBPaQ)
+
+[Python Exercises](https://www.w3schools.com/python/python_exercises.asp)<br>
+
+[Python for coding interviews](https://www.youtube.com/watch?v=0K_eZGS5NsU)<br>
 
 [Online Python Interpreter](https://www.onlinegdb.com/online_python_compiler)
 
