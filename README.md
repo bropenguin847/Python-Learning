@@ -111,8 +111,9 @@ python -m pip install scipy
 ---
 ## Appendix 📌
 Cheatsheet for subscripting and operator precedence
-<img src="images\appendix1.png" width="750" height="550" alt="subscripting"><br>
-<img src="images\appendix2.png" width="700" height="700" alt="operator precedence"><br>
+<img src="images\syntax_reference.png" alt="syntax_reference"><br>
+<img src="images\appendix1.png" alt="subscripting"><br>
+<img src="images\appendix2.png" alt="operator precedence"><br>
 <img src="images\special_character.png" width="600" height="400" alt="Special Character"><br>
 <img src="images\unicode_symbol.png" width="600" height="400" alt="Unicode Symbol"><br>
 
