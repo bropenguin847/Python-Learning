@@ -8,7 +8,7 @@ The data is stored in a xlsx file named air_quality.xlsx:
 2.	Using the fitted models, predict the AQI for the next three month_array
     (January, February, and March of the following year).
 3.	Create a user interface for the users to select which order they want to display in the graph.
-    Example; order 1 or order 2 or order 3 or order 1,2 and 3.
+    Example; 1 = order 1, 2 = order 2, 3 = order 3 or 4 = order 1,2 and 3.
 4.	Plot the original data and overlay the polynomial fitting curves on the same graph
     based on user selection.
 
@@ -62,13 +62,15 @@ extended2 = np.concatenate([average2, predit_order2])
 extended3 = np.concatenate([average3, predit_order3])
 # extended4 = np.concatenate([average4, predit_order4])
 
-plt.plot(months_extend, extended1, color='darkorange', label='Fitted order 1')
-plt.plot(months_extend, extended2, color='mediumseagreen', label='Fitted order 2')
-plt.plot(months_extend, extended3, color='darkmagenta', label='Fitted order 3')
+plt.plot(months_extend, extended1, color='darkorange', label='Fitted order 1', marker='x')
+plt.plot(months_extend, extended2, color='mediumseagreen', label='Fitted order 2', marker='x')
+plt.plot(months_extend, extended3, color='darkmagenta', label='Fitted order 3', marker='x')
 # plt.plot(months_extend, extended4, color='dodgerblue', label='Fitted order 4')
 plt.legend()
 plt.title('Polyfit all order')
-plt.xlabel('month_array')
+plt.xlabel('Months')
+plt.xticks(months_extend, labels=month_name, rotation=50)
+plt.ylabel('AQI')
 plt.show()
 
 # Task 3 Get user input
@@ -111,8 +113,8 @@ plt.plot(month_array, aqi, color='tomato', label='Original', marker='o')
 plt.xlim(0, 15)
 plt.title('Set 3')
 plt.xticks(months_extend, labels=month_name, rotation=50)
-plt.xlabel('month_array')
+plt.xlabel('Months')
 plt.ylabel('AQI')
 plt.tight_layout()
-plt.legend()
+plt.legend(loc='lower left')
 plt.show()
