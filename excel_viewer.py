@@ -128,4 +128,8 @@ style = ttk.Style()
 style.configure("Horizontal.TScrollbar", thickness=30)  # Horizontal scrollbar
 style.configure("Vertical.TScrollbar", thickness=100)    # Vertical scrollbar
 
+# Add a status bar
+status_bar = tk.Label(root, textvariable=status_var, relief="sunken", anchor="w")
+status_bar.pack(side="bottom", fill="x", padx=10, pady=5)
+
 root.mainloop()
