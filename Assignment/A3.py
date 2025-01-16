@@ -2,11 +2,12 @@
 A3
 Problem Scenario:
 You are provided with a dataset containing information about university students' performance over
-the past three years. The dataset includes features such as aƩendance rate, assignment scores, study
-hours, participation in extracurricular activities, and final exam scores. Your objective is to analyze the
-data to identify key factors impacting academic performance and build a predictive model to forecast
-students' final exam scores based on these factors. With the knowledge of scientific programming, you
-are required to WRITE THE SCRIPT for each task together with comment that explain the code.
+the past three years. The dataset includes features such as aƩendance rate, assignment scores, 
+study hours, participation in extracurricular activities, and final exam scores. 
+Your objective is to analyze the data to identify key factors impacting academic performance 
+and build a predictive model to forecast students' final exam scores based on these factors.
+With the knowledge of scientific programming, you are required to WRITE THE SCRIPT for each task 
+together with comment that explain the code.
 
 Task 1: Data Cleaning Process
 a) Examine the dataset for missing values and inconsistencies. Document how many data points
@@ -54,6 +55,7 @@ null_count = df.isnull().sum()
 print('Number of missing values for each column')
 print(null_count)
 
+# Finding outliers using IQR, which will be marked True in new column
 for i in range(1, df_size):
     data = data_list[i]
     Q1 = df[data].quantile(0.25)
@@ -74,3 +76,41 @@ for i in range(1, df_size):
     # Replace outliers with NaN using loc
     df.loc[(df[data] < lower_bound) | (df[data] > upper_bound), data] = np.nan
     # df[data] = df[data].where((df[data] >= lower_bound) & (df[data] <= upper_bound), np.nan)
+
+# Create a list to store all the values of each column
+# This is to handle each data column seperately
+attendance = np.array(df['attendance_rate'].values)
+study = np.array(df['study_hours'].values)
+assignment = np.array(df['assignment_scores'].values)
+finals = np.array(df['final_exam_score'].values)
+
+# Start interpolating by getting x-points
+x_points = np.arange(df_range)
+
+# Interpolate for attendance
+valid = ~np.isnan(attendance)
+missing = np.isnan(attendance)
+attendance[missing] = np.interp(x_points[missing], x_points[valid], attendance[valid])
+df['attendance_rate'] = attendance.round(3)     # Round off to 2 decimal values
+
+# Interpolate for study hours
+valid = ~np.isnan(study)
+missing = np.isnan(study)
+study[missing] = np.interp(x_points[missing], x_points[valid], study[valid])
+df['study_hours'] = study.round(3)              # Round off to 2 decimal values
+
+# Interpolate for assignment scores
+valid = ~np.isnan(assignment)
+missing = np.isnan(assignment)
+assignment[missing] = np.interp(x_points[missing], x_points[valid], assignment[valid])
+df['assignment_scores'] = assignment.round(3)    # Round off to 2 decimal values
+
+# Interpolate for final exam
+valid = ~np.isnan(finals)
+missing = np.isnan(finals)
+finals[missing] = np.interp(x_points[missing], x_points[valid], finals[valid])
+df['final_exam_score'] = finals.round(3)        # Round off to 2 decimal values
+
+# Export the cleaned data to new csv
+df.to_csv('A3_cleaned_data.csv', index=False)
+
