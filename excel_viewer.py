@@ -61,9 +61,12 @@ from tkinter import ttk
 import pandas as pd
 
 def open_file():
-    """Will ask user to choose file type to open"""
+    """
+    Opens a file dialog to select a CSV or Excel file, reads its content,
+    and updates the Treeview widget with the file's data.
+    """
     file_path = filedialog.askopenfilename(
-        filetypes=[("Excel files", "*.xlsx"), ("CSV files", "*.csv")]
+        filetypes=[("CSV files", "*.csv"), ("Excel files", "*.xlsx")]
     )
     if file_path:
         try:
@@ -78,6 +81,12 @@ def open_file():
             tk.messagebox.showerror("Error", f"Failed to read file: {e}")
 
 def update_treeview(df):
+    """
+    Updates the Treeview widget to display the contents of the given DataFrame.
+
+    Args:
+        df (pd.DataFrame): The DataFrame containing data to populate the Treeview.
+    """
     # Clear existing data
     for row in tree.get_children():
         tree.delete(row)
@@ -98,7 +107,12 @@ def update_treeview(df):
 # Create main window
 root = tk.Tk()
 root.title("File Viewer")
-root.geometry("800x600")
+root.geometry("900x600")
+root.minsize(600, 400)
+
+# Define a variable for the status bar
+status_var = tk.StringVar()
+status_var.set("Welcome! Open a file to get started.")
 
 # Create Open File button
 open_button = tk.Button(root, text="Open File", command=open_file)
@@ -129,7 +143,7 @@ style.configure("Horizontal.TScrollbar", thickness=30)  # Horizontal scrollbar
 style.configure("Vertical.TScrollbar", thickness=100)    # Vertical scrollbar
 
 # Add a status bar
-status_bar = tk.Label(root, textvariable=status_var, relief="sunken", anchor="w")
+status_bar = tk.Label(root, textvariable = status_var, relief="sunken", anchor="w")
 status_bar.pack(side="bottom", fill="x", padx=10, pady=5)
 
 root.mainloop()
