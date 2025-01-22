@@ -219,13 +219,33 @@ Pickle in Python:
      or transport data over the network.
 
 Using f-string:
-    To create an f-string, prefix the string with the letter “ f ”. F-strings provide a
+    Prefix the string with the letter “ f ”. F-strings provide a
     concise and easy way to put Python expressions inside string for formatting.
-    Example: f'string here {variable:type}'
+    Example: f'STRING HERE {variable:size.type}'
+    size = width allocated for variable, the width of it
     the type can be:    .d = decimal
                         .s = string
-                        m.nf = float, m = width, n = flaoting points
+                        .nf = float, n = flaoting points
                         .e / .E = scientific notation
+                            big_num = 4_456_435
+                            print(f'the number is:{big_num:.0e}')
+
+    To allocate spaces for variable and aligning them:
+        number = 1234.5678 , greeting = 'hello'   
+        print(f'You are prisoner {number:<15}') # Align left
+        print(f'{greeting:>15} there')  # Align right
+        print(f'{greeting:^10}')    # Align middle
+         adding any symbols in empty spaces: @< or *^ or _>
+
+    For big numbers, can seperate them with comma or underscore
+        big_num = 132320743.56789
+        print(f'{big_num:25,.2f}) or print(f'{big_num:30_.2f})
+
+Printing datetime
+    import datetime
+    time_now = datetime.datetime.now()
+    print(f'The time now is : {time_now:%H:%M:%S}')
+    print(f'The date now is : {time_now:%d-%m-%Y}')
 
 Using  \ to break a char:
     \n = newline

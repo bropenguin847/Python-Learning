@@ -1,5 +1,10 @@
-#(1) if elif else
+"""
+Chapter 4 Example 1 & 2
+if elif else
+"""
+
 def practice1(x):
+    """if, elif, else"""
     if x < 0:
         print('negative')
     elif x == 0:
@@ -7,8 +12,8 @@ def practice1(x):
     else:
         print('non-negative')
 
-#(2) if else
 def practice2(num):
+    """if, else"""
     if num:
         print('TRUE')
     else:

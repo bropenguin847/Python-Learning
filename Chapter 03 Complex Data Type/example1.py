@@ -1,3 +1,8 @@
+"""
+Chapter 3 Example 1
+Matrix using numpy
+"""
+
 import numpy as np
 
 # Define two 2x2 matrices

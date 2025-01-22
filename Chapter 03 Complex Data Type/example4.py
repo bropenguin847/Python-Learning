@@ -1,3 +1,8 @@
+"""
+Chapter 3 Example 4
+Properties of array
+"""
+
 import numpy as np
 
 # Define an array (2x2)

@@ -1,4 +1,8 @@
-# Mixed Arithmetic, Relational, and Boolean Operations
+"""
+Chapter 3 Example 12
+
+Mixed Arithmetic, Relational, and Boolean Operations
+"""
 
 # Define sample variables
 x = 8

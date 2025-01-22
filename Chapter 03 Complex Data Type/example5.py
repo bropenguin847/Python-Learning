@@ -1,3 +1,8 @@
+"""
+Chapter 3 Example 5
+Vectors
+"""
+
 import numpy as np
 
 # Define interest rate and number of years

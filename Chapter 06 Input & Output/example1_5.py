@@ -1,5 +1,6 @@
 """
 Chapter 6 Example 1, 2, 3, 4, 5
+Getting input from user and formatting output strings
 """
 
 # Example 1
@@ -18,6 +19,5 @@ print(f'The value of x is {x}') # Outputs: The value of x is 10
 
 # Example 5
 cows = 5    # Define the variable 
-
 # Formatted output using f-strings 
 print(f'There are {cows:7.2f} cows in the pasture')

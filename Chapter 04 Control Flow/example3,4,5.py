@@ -1,3 +1,8 @@
+"""
+Chapter 4 Example 3, 4, 5
+if, elif, else statements with multiple conditions
+"""
+
 # Input values for a, b, and c
 a = float(input('Input a value: '))
 b = float(input('Input b value: '))

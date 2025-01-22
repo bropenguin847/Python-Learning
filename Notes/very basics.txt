@@ -1,0 +1,43 @@
+Basic Coding Vocabulary
+
+General Web Development:
+* Server: A computer that hosts website codes, and "serves" a website code upon requested by "client" computer.
+            Usually sit in large warehouses with thousands of other servers that are similar in size and computation power
+* Client: A computer used to access websites
+            Example: tablet, computer, laptop, phone
+* Designer: An artistic professional that decides how a website will look and feel, along with the ways users will interact with the website
+            For example, clicking, swiping, scrolling, and so on.
+            Basically designing the User Interface (UI)
+* Wireframe: An illustration created by designers that show in detail a website's layouts, images, and color schemes.
+* Developer: An engineering professional who writes code to turn wireframes into useable websites.
+            Based on the type of code written, developers are referred to as front-end, back-end, or full stack.
+* Front-end: Everything you can see and click in a browser. Front-end developers write code in front-end languages
+            like HTML, CSS, and JavaScript to create the website appearance.
+* Back-end: Everything that happens behind-the-scenes to make the front-end perform as intended.
+            Back-end developers write code in back-end languages like Ruby or Python to create functionality
+            like logging in users, storing user preferences, and retrieving data like comments on a photo.
+#############################################################################################
+Terms related to front-end languages:
+* HTML (Hypertext Markup Language): A language used to place text, images, and other content on a webpage.
+* HTML tag: HTML instructions, usually appearing in pairs. Browsers apply special effects to text between an opening <element&gt; and closing </element&gt; HTML tag.
+    For instance, the <h1&gt; tag renders in a browser as a large bolded headline and can be used like this: <h1>Dewey beats Truman</h1>.
+* HTML attribute: Attributes or parameters for HTML tags that modify the tag's behavior. Attributes are always placed in the opening HTML tag.
+    For example, href is the attribute in the following anchor tag (used to create hyperlinks): <a href="http://www.google.com">Search engine</a>
+
+* CSS (Cascading Style Sheets): Code that modifies HTML on webpages and that controls the appearance of content by
+    changing text size, image size, and other attributes.
+* JavaScript: Code that adds interactivity and animation to webpages.
+    JavaScript also detects browser events such as mouse clicks, validates user input such as text entries,
+    and retrieves data from external websites.
+    
+* Variable: A storage of data that have a name and contains data for use in coding.
+* If statement (conditional): A code instruction that tests a condition that usually includes variables
+    such as x < 18, and executes code you write when the condition is true.
+* Function: A name given to a group of programming statements for easy reference and use.
+* Loops: A function that repeats until a condition is met
+#############################################################################################
+Terms related to back-end languages:
+* Ruby: An open-source programming language best known for use in web programming.
+* Rails: A framework designed to make creating webpages with Ruby easy.
+* Python: An open-source programming language used on the web, in scientific applications, and for data analysis.
+#############################################################################################

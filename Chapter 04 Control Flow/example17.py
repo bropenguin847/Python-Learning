@@ -1,4 +1,8 @@
-import numpy as np  # Import NumPy for array operations
+"""
+Chapter 4 Example 17
+"""
+
+import numpy as np
 
 # Define the array of income values
 inc = np.array([4000, 12000, 18000, 23000, 30000])

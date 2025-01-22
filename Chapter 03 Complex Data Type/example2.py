@@ -1,3 +1,8 @@
+"""
+Chapter 3 Example 2
+Using Numpy as library to create arrays
+"""
+
 import numpy as np
 
 A = np.array([[1, 2],

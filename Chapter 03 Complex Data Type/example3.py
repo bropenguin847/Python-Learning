@@ -1,3 +1,8 @@
+"""
+Chapter 3 Example 3
+Perform element wise operation of array
+"""
+
 import numpy as np
 
 # Define two 2x2 arrays

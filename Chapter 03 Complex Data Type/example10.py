@@ -1,4 +1,8 @@
-# Relational Operators in Python
+"""
+Chapter 3 Example 10
+Relational Operators in Python
+"""
+
 # Define sample variables
 a = 5
 b = 10

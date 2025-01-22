@@ -33,8 +33,10 @@ Contains notes for each chapter. Notes will be continually updated.
 For array notes, contain specific notes regarding numpy arrays, numpy functions and so on.
 Further references can be found in the appendix.
 
+Also included a very basics for absolute beginners about the terms used daily.
+
 ---
-## [Exercises ᕙ(  •̀ ᗜ •́  )ᕗ](https://github.com/bropenguin847/Python-Learning/tree/main/exercises)
+## [Exercises ᕙ( •̀ ᗜ •́ )ᕗ](https://github.com/bropenguin847/Python-Learning/tree/main/exercises)
 In exercises folder, contain exercises for python, such as array manipulation, bubble sort 
 and mistakes that I have made during my tests
 (regretting life)
@@ -51,6 +53,7 @@ For the data in Assignment, outliers and missing values have been added in the .
 ---
 ## [Quiz](https://github.com/bropenguin847/Python-Learning/tree/main/Quiz)
 In this folder, There are several questions from my quiz in class. Quiz 1 and Quiz 2 are very similar, with almost same way to solve the problems, just using different datas. A good way to learn how to read xlsx file using python and plot graphs.
+Datas are included in the folder for each question.
 
 ---
 ## Scripts 📝
@@ -60,6 +63,7 @@ Some Python files are combined together to reduce clutter and because the codes 
 Such as example1&2 are combination of example1 and example2 in Chapter 4.
 
 In Chapter 8, the folder 'Signals' is for Signals and System course. It's an assignment, the code is an alternative to plotting graphs using MatLab. However, a MatLab version of the code is also available.
+There is also another folder called Class Activity which includes solutions from Asynchronous Class Activity questions.
 
 Chapter 7 (Debugging) and Chapter 12 (OOP) is not included in this repo, but I will try to find the notes for both of those chapter.
 
@@ -160,4 +164,3 @@ How to write clean Python code<br>
 ---
 ## Feel free to raise any issues if you found any mistakes or outdated information in this repo. Have a nice journey into the world of Python. All the best ᯓ★!!
 ### *ੈ✩‧₊˚༺☆༻*ੈ✩‧₊˚
-!need to make custom pdf for each chapter

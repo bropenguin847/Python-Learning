@@ -1,4 +1,9 @@
-import numpy as np  # Import NumPy for array operations
+"""
+Chapter 4 Example 15
+Using meshgrid
+"""
+
+import numpy as np
 
 # Define the arrays of principal amounts and years
 a = np.array([100, 500, 800])
