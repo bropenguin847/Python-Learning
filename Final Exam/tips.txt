@@ -1,0 +1,25 @@
+Tips for Final Exam
+
+Q1: Chapter 1-4 (Libraries: Numpy)
+    - Flowchart to pseudocode OR Pseudocode to flowchart conversion
+    - Create and access array, subscripting, reshape
+    - Understand and write script for condition
+    - while loop and for loop
+
+Q2: Chapter 5-6 (Libraries: Numpy & Pandas)
+    Theory questions and write Python script for:
+        - Creating and calling a function
+        - Prompt input and output
+        - import/export data from/to external file
+
+Q3: Chapter 8-10 (Libraries: Numpy & Matplotlib & Scipy)
+    Theory questions and write Python script for:
+        - Interpolation
+        - Plotting
+        - Polynomial and curve fitting
+
+Q4: Chapter 11 (Libraries: Numpy, Matplotlib & Pandas)
+    Theory questions and write Python script for:
+        - Creating dataframe
+        - Missing data handling, remove and fill data
+        - Outliers handling using IQR
