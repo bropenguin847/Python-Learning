@@ -6,14 +6,28 @@ variable:
 operation = function / subroutine
 
 #Types of data in python
-#Number:    Integers(1,2,3,-4...)    Floats(0.3,-0.523...)    complex(1+j)
-#String:    "hello", 'hiii'
-#Boolean:   True, False
-#NoneType:  :Represents the absence of a value or a null value. It is often used to signify 'nothing' or 'no value here'
+    Number:
+        - Integers(1,2,3,-4...)
+        - Floats(0.3,-0.523...)
+        - Complex(1+j)
+
+    string, str:    "hello", 'hiii'
+
+    Boolean:   True, False
+
+    NoneType:  Represents the absence of a value or a null value.
+            It is often used to signify 'nothing' or 'no value here'
             None
-#list:      ['hello', True, 97, -2.833]     #variables in list can be in different data types
-#tuple:     
-#Dictionary:{'name':'Kippu', 'weight':'65', 'dank':'extreme'}
+
+    list:      ['hello', True, 97, -2.833]
+        variables in list can be in different data types
+
+    tuple:     An unchangeable ordered sequence of elements.
+            Example: (value1, value2, …)
+
+    Dictionary: Python’s mapping data type. Dictionaries map keys to values as a means of storing information
+            Similar to hashmap in other programming languages
+            {'name':'Kippu', 'weight':'65', 'dank':'extreme'}
 #set:       
 #array:     
 
@@ -405,7 +419,6 @@ Types:  - Supervised Learning = Machine learns from training data that is labele
         - Unsupervised Learning = Non-labeled training data
         - Reinforcement Learning = Learns on its own, sometimes reward system is present
                                     = have feedback to learn from output
-
 
 
 

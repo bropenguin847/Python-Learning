@@ -254,5 +254,5 @@ def main():
     vle_diagram(x_values, y_values, x_interp=0.45)
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
