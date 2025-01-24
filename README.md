@@ -56,6 +56,11 @@ In this folder, There are several questions from my quiz in class. Quiz 1 and Qu
 Datas are included in the folder for each question.
 
 ---
+## [Final Exam 💯](https://github.com/bropenguin847/Python-Learning/tree/main/Final%20Exam)
+Contains tips for final exam. Have 4 questions, each located in 4 .py files.
+Docstring in each file explains the details of the question.
+
+---
 ## Scripts 📝
 All the folders labeled with Chapter contain scripts for each chapter. Some have xlsx or csv files used as data. Feel free to try it out.
 
