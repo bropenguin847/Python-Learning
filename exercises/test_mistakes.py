@@ -7,10 +7,12 @@ import numpy as np
 a = np.array([1, 2])
 b = np.array([[1,2],[3,4]])
 c = a*b.T
-print(c)
-
-# Since a is only [1, 2] in order to multiply b [[1, 2], [3, 4]]
-# a needs to be broadcasted to [[1, 2], [1, 2]] in order to perform the element wise multiply
+print(f"""
+After multiplying array a and b, then that it is transposed, the result is:
+{c}
+Since a is only [1, 2] in order to multiply b [[1, 2], [3, 4]]
+a needs to be broadcasted to [[1, 2], [1, 2]] in order to perform the element wise multiply
+""")
 
 # 2)
 arr1 = np.array([[5, 10, 15], [20, 25, 30], [35, 40, 45]])
