@@ -46,6 +46,13 @@ print(arr2)
 print(Y)
 print(Z)
 
+# Check array shape and attributes
+arr_shape = arr3d.shape
+arr_size = arr3d.size       # Returns number of elements
+arr_ndim = arr3d.ndim
+arr_rows = len(arr2d)
+arr_columns = len(arr2d[0])
+
 # Reshaping, using Transpose, meshgrid and broadcasting
 print(arr2d.T)
 
@@ -63,3 +70,8 @@ elif 70 < num < 80:
     print('The number is in a sweet spot')
 else:
     print('The number means nothing')
+
+# To be used in Q2
+# Saving a NumPy array to a binary file
+array_save = arr3d
+np.save('array_save.npy', array_save)
