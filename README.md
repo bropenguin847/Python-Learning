@@ -150,6 +150,8 @@ How to write clean Python code<br>
 
 [Python Exercises](https://www.w3schools.com/python/python_exercises.asp)<br>
 
+[Python Roadmap](https://roadmap.sh/python)<br>
+
 [Python for coding interviews](https://www.youtube.com/watch?v=0K_eZGS5NsU)<br>
 
 [Online Python Interpreter](https://www.onlinegdb.com/online_python_compiler)
@@ -157,7 +159,6 @@ How to write clean Python code<br>
 [Python Online Game Tutorial Playlist](https://www.youtube.com/playlist?list=PLzMcBGfZo4-kR7Rh-7JCVDN8lm3Utumvq)
 
 [Data Analysis with Python Full Course](https://www.youtube.com/watch?v=r-uOLxNrNk8)<br>
-
 
 <br>
 [Awesome ChatGPT prompts](https://github.com/f/awesome-chatgpt-prompts)
