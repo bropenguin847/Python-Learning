@@ -1,3 +1,9 @@
+"""
+Chapter 11 Example 7
+
+Creating dataframe
+"""
+
 import pandas as pd
 
 # Define the variables (fruits and quantities)

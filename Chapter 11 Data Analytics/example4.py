@@ -1,3 +1,9 @@
+"""
+Chapter 11 Example 4
+
+Sorting Arrays
+"""
+
 import numpy as np
 
 # Example 1: Sorting a 1D Array
