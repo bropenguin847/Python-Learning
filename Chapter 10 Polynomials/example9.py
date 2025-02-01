@@ -1,4 +1,5 @@
-""" Example 9
+"""
+Chapter 10 Example 9
 This is a continuation of example 4. It imports from stability_check.py
 in the same folder
 

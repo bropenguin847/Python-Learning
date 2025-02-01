@@ -1,3 +1,8 @@
+"""
+Chapter 8 Example 10
+Magnitude vs Frequency (Log Scale)
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -29,4 +34,3 @@ plt.yticks(np.arange(-1, 1.5, 0.5), [f'{tick:.1f}π' for tick in np.arange(-1, 1
 
 plt.tight_layout()
 plt.show()
-

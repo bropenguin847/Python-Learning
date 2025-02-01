@@ -1,5 +1,10 @@
-import numpy as np 
-import matplotlib.pyplot as plt 
+"""
+Chapter 8 Example 11
+Histogram plot
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
 
 data = np.random.randn(1000)
 

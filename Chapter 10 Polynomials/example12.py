@@ -1,5 +1,8 @@
-""" Chapter 10 Example 12
+"""
+Chapter 10 Example 12
 uses np.tile
+Syntax: np.tile(A, reps)
+        Construct an array by repeating A the number of times given by reps
 """
 
 import pandas as pd

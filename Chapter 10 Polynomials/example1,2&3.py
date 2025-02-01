@@ -1,3 +1,9 @@
+"""
+Chapter 10 Example 1, 2 & 3
+
+Multiply, Divide, Define as vectors
+"""
+
 import numpy as np
 # Multiply and Divide
 # Define two polynomials
@@ -14,8 +20,8 @@ print("Quotient:", quotient)
 print("Remainder:", remainder)
 
 # Define the polynomials as vectors
-p1 = [1, 3.5, 0, 2]  # Represents x^3 + 3/2x^2 + 2
-p2 = [1, 0, -5]    # Represents x^2 - 5
+p1 = [1, 3.5, 0, 2]     # Represents x^3 + 3/2x^2 + 2
+p2 = [1, 0, -5]         # Represents x^2 - 5
 
 # Polynomial multiplication to find f(x)
 f_x = np.polymul(p1, p2)

@@ -1,3 +1,8 @@
+"""
+Chapter 8 Example 6
+Plotting magnitude and phase against frequency
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -27,13 +32,12 @@ plt.xticks(np.arange(0, 11, step=2))  # Setting xticks every 2 kHz
 plt.subplot(2, 1, 2)
 plt.plot(f / 1000, Phase / np.pi)
 plt.xlabel('Frequency (kHz)')
-plt.ylabel('Phase ($\\pi$ rad)')
+plt.ylabel('Phase (π rad)')
 
 # Setting yticks as multiples of π
 yticks = [-1, -0.5, 0, 0.5, 1]
 ytick_labels = ['-1π', '-0.5π', '0π', '0.5π', '1.0π']
 plt.yticks(yticks, ytick_labels)
-
 plt.xticks(np.arange(0, 11, step=2))  # Setting xticks every 2 kHz
 plt.tight_layout()
 plt.show()

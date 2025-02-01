@@ -1,4 +1,5 @@
-""" Example 5
+"""
+Chapter 10 Example 5
 This example demonstrates the use of numpy.polyval(),
 which can evaulate a poly when x = ...
 """

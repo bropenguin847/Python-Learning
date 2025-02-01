@@ -1,5 +1,7 @@
 """
 Chapter 10 Example 11
+Read data from excel, apply 1st, 2nd, 3rd degree of polyfit, evaluate poly
+Plot results
 """
 
 import pandas as pd

@@ -1,9 +1,14 @@
+"""
+Chapter 10 Example 8
+Finding the roots, then evaulating and plotting
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 
 # Define constants
-v = 30  # Initial velocity (m/s)
-g = -9.8  # Acceleration due to gravity (m/s^2)
+v = 30      # Initial velocity (m/s)
+g = -9.8    # Acceleration due to gravity (m/s^2)
 
 # Define the coefficients of the polynomial for displacement
 # Corresponding to d = v*t + (g/2)*t^2

@@ -1,5 +1,10 @@
-import numpy as np 
-import matplotlib.pyplot as plt 
+"""
+Chapter 8 Example 9
+log plot
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
 
 L = [7.94e2, 1.26e6, 3.16e8, 1.58e9, 6.3e9, 1.99e11]
 Occasion = ['Library', 'Cafeteria', 'Car', 'Train', 'Motorcycle', 'Concert']
