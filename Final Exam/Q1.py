@@ -9,8 +9,8 @@ Q1: Chapter 1-4 (Libraries: Numpy)
 """
 
 
-import numpy as np
 import random
+import numpy as np
 
 # Creating array
 # 1D array
@@ -55,7 +55,6 @@ arr_columns = len(arr2d[0])
 
 # Reshaping, using Transpose, meshgrid and broadcasting
 print(arr2d.T)
-
 
 
 # if, elif, else statements
