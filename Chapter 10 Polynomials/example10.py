@@ -1,6 +1,6 @@
 """
 Chapter 10 Example 10
-Read data from excel file. Apply fittign and evaluating the polynomial
+Read data from excel file. Apply fitting and evaluating the polynomial
 Finally, plot results
 """
 

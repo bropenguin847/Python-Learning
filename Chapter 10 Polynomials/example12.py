@@ -1,8 +1,12 @@
 """
 Chapter 10 Example 12
-uses np.tile
-Syntax: np.tile(A, reps)
-        Construct an array by repeating A the number of times given by reps
+
+Read & extract data from excel, do polyfit, calculate r-squared values,
+plot results
+
+Uses zip function
+combines multiple iterables such as lists, tuples, strings, dict etc
+into a single iterator of tuples
 """
 
 import pandas as pd
@@ -30,6 +34,7 @@ for n, r2 in enumerate(R2, 1):
 
 # Plot original data and fitted curves
 plt.plot(day, water, 'x', label='Measured Data')
+
 # The zip function in Python combines multiple iterables (e.g., lists or arrays)
 # into pairs of corresponding elements, creating an iterator of tuples.
 for fit, label in zip(water_fit, labels[1:]):
@@ -41,7 +46,6 @@ plt.title('Water Usage for 1 Harvesting Cycle')
 plt.legend(fontsize=8)  # Set legend font size to 8
 plt.grid(True)
 plt.show()
-
 
 # Get and print coefficients for the 3rd-order polynomial
 coeffs_order_3 = np.polyfit(day, water, 3)

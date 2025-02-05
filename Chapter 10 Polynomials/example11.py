@@ -2,6 +2,10 @@
 Chapter 10 Example 11
 Read data from excel, apply 1st, 2nd, 3rd degree of polyfit, evaluate poly
 Plot results
+
+uses np.tile
+Syntax: np.tile(A, reps)
+        Construct an array by repeating A the number of times given by reps
 """
 
 import pandas as pd

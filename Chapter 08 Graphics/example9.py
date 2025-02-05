@@ -1,6 +1,6 @@
 """
 Chapter 8 Example 9
-log plot
+Log plot vs Normal plot
 """
 
 import numpy as np

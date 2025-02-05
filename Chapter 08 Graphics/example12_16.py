@@ -10,9 +10,10 @@ Example 16: Scatter box plot
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Generate random data
+# Generate random data for Example 12 & 13
 data = np.random.randn(100, 3)
 
+# Example 12: Boxplot
 # Create a figure for the plot
 plt.figure()
 
@@ -23,13 +24,10 @@ plt.show()
 
 
 # Example 13: Boxplot with notch
-# Generate random data
-nums = np.random.randn(100, 3)
-
 # Create a figure for the plot
 plt.figure()
 # Plot a box plot with notches
-plt.boxplot(nums, notch=True)
+plt.boxplot(data, notch=True)
 
 plt.title('Notch Box Plot')
 plt.show()
@@ -40,7 +38,6 @@ plt.show()
 group1 = np.random.randn(100)
 group2 = np.random.randn(100) + 2
 
-# Create the grouped box plot
 plt.boxplot([group1, group2])
 plt.title('Grouped Box Plot')
 plt.show()
