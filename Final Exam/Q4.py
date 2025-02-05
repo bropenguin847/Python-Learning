@@ -7,7 +7,7 @@ Q4: Chapter 11 (Libraries: Numpy, Matplotlib & Pandas)
         - Missing data handling, remove and fill data
         - Outliers handling using IQR
 
-        - sorting arrays
+        - Sorting arrays
 """
 
 
@@ -69,13 +69,19 @@ print(df.head())
 
 
 # Sorting arrays
-# Sorting a 1D Array
+# Sorting a 1D Array, default is ascending
 arr1d = np.array([6, 3, 7, 29, 8, 11, 171, 39, 92])
 result = np.sort(arr1d)
-print("Sorted 1D Array:", result)
+print("\nSorted 1D Array:", result)
+
+# Sorting 1D array descending
+result2 = np.sort(arr1d)[::-1]
+print("\nDescending 1D Array:", result2)
 
 # Sorting a 2D Array by Columns
-X = np.array([[3, 5, 2], [6, 2, 7]])
+X = np.array([[3, 5, 2],
+              [6, 2, 7],
+              [2, 4, 5]])
 sort_col = np.sort(X, axis=0)
 print("\nSorted 2D Array by Columns (ascending):\n", sort_col)
 
