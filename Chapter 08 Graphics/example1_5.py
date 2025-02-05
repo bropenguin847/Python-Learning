@@ -5,7 +5,7 @@ Example 1: Exponential plot, uses np.exp
 Example 2: Sine wave plt, uses np.sin
 Example 3: Sin(ω) graph, uses raw string (r'') originally
 Example 4: Plotting polynomials
-Example 5: 
+Example 5: Using subplots
 """
 
 import numpy as np
