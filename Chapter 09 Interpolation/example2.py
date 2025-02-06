@@ -27,7 +27,7 @@ def api_interpolation(km):
         result[k] = round(interpolated_api[k], 2)
         print(f"API value at km {k} is {result[k]}")
     print("\n")
-    
+
     # Plotting the data
     plt.figure()
     plt.plot(distances, api_values, 'o', label='Given API values')  # Known data points

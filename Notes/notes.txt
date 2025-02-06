@@ -312,7 +312,7 @@ syntax:
 Alternative way (simple interpolation)
 
 import numpy as np
-Interpolated = np.interp(new_x, ori_x, ori_y)
+Interpolated_y = np.interp(new_x, ori_x, ori_y)
 
 km = np.atleast_id(km) # convert to 1D array
 km.astype(int) # ensure indices are integer

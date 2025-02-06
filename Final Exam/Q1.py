@@ -35,6 +35,10 @@ extract1 = arr1d[1:4]           # Column 2-4
 extract2 = arr2d[1, 0:2]        # Row 2, column 1-2
 extract3 = arr3d[1, 0:2, 1:]    # 2nd page, row 1-2, column 2-3
 
+# Slicing: Extracting a submatrix
+sub_arr = arr2d[1:3, 0:5:2]  # Rows 1 to 2, Columns 1 to 3
+print(sub_arr)
+
 # Fancy indexing
 arr1 = np.array([[5, 10, 15], [20, 25, 30], [35, 40, 45]])
 arr2= np.array([arr1, 2*arr1])
@@ -74,3 +78,6 @@ else:
 # Saving a NumPy array to a binary file
 array_save = arr3d
 np.save('array_save.npy', array_save)
+
+# file_path = r"C:\Users\brope\OneDrive\Desktop\UTM scientific programming\Final Exam\example.txt"
+# data_numpy = np.loadtxt(file_path)

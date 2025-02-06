@@ -20,6 +20,7 @@ s = 1j * omega  # s = jω
 # Evaluate the transfer function Q(s) = Q_n / Q_d over the frequency range
 numerator = np.polyval(Q_n, s)
 denominator = np.polyval(Q_d, s)
+np.polyval(x,)
 
 # Directly compute Q_s = Q_n / Q_d without handling zero-division
 Q_s = numerator / denominator

@@ -12,7 +12,8 @@ Fruit = ['Orange', 'Watermelon', 'Pear', 'Apple', 'Banana', 'Grapes', 'Mango',
 Quantity = [10, 12, 16, 23, 18, 20, 25, 30, 8, 14, 5, 11]
 
 # Create the DataFrame
-df = pd.DataFrame({'Fruit': Fruit, 'Quantity': Quantity})
+fruit_dict = {'Fruit': Fruit, 'Quantity': Quantity}
+df = pd.DataFrame(fruit_dict)
 
 # Display the DataFrame
 print(df)

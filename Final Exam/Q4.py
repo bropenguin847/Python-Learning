@@ -14,7 +14,7 @@ Q4: Chapter 11 (Libraries: Numpy, Matplotlib & Pandas)
 import os
 import numpy as np
 import pandas as pd
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 # Creating easy dataframe
 # Define the variables (fruits and quantities)
@@ -29,8 +29,9 @@ df_easy = pd.DataFrame({'Fruit': Fruit, 'Quantity': Quantity})
 # Read from csv file and creating dataframe
 currrent_dir = os.path.dirname(__file__)
 file_path = os.path.join(currrent_dir, "random_data.csv")
+file_path2 = r"C:\Users\brope\OneDrive\Desktop\UTM scientific programming\Final Exam\random_data.csv"
 # df = pd.read_excel(file_path, sheet_name = 'xxx')
-df = pd.read_csv(file_path)
+df = pd.read_csv(file_path2)
 
 # print('The full dataframe\n', df)
 print('The shape of dataframe\n', df.shape)

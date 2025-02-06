@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 data = np.random.randn(1000)
 
-plt.figure()
+# plt.figure()
 plt.hist(data, bins=50)
 plt.xlabel('Data Value')
 plt.ylabel('Frequency')

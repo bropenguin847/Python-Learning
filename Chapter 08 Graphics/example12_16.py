@@ -1,5 +1,6 @@
 """
 Chapter 8 Example 12, 13, 14, 15 & 16
+Boxplot
 Example 12: Boxplot
 Example 13: Boxplot with notch
 Example 14: Group boxplot

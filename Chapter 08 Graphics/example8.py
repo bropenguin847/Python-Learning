@@ -12,6 +12,6 @@ y = np.sin(w * n)
 plt.stem(n, y)
 plt.xlabel('sample, n')
 plt.ylabel('sin(ω n)')
-t_string = f'Discrete Sinusoidal Signal for $\\omega = {w/np.pi:.2f} \\pi$'
-plt.title(t_string)
+title = f'Discrete Sinusoidal Signal for $\\omega = {w/np.pi:.2f} \\pi$'
+plt.title(title)
 plt.show()

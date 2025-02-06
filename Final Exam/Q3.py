@@ -77,6 +77,7 @@ plt.show()
 # Polynomial and curve fitting ######
 # Use polymul & polydiv, the latter will return 2 values in arrays
 # Use [x^^3, x^^2, x, c] to define polynomial as vectors
+# Coefficient = np.polyfit()
 # Use np.polyval(polynomial, x_value) to evaluate polynomial at x = ...
 # Use np.roots to find roots of polynomial
 # Apply polynomial fitting with np.polyfit(x, y, degree)

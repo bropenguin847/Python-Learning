@@ -1,4 +1,5 @@
-""" Chapter 9 Example 1
+"""
+Chapter 9 Example 1
 """
 
 import numpy as np

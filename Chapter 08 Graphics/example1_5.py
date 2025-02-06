@@ -1,5 +1,5 @@
 """
-Chapter 8 Example 1, 2 & 5
+Chapter 8 Example 1, 2, 3, 4 & 5
 
 Example 1: Exponential plot, uses np.exp
 Example 2: Sine wave plt, uses np.sin
@@ -35,16 +35,20 @@ plt.show()
 w = np.linspace(0, 2*np.pi, 1000)
 y = np.sin(w)
 
-fig, ax = plt.subplots()
-ax.plot(w, y)
-ticks = [0, 0.5 * np.pi, np.pi, 1.5 * np.pi, 2 * np.pi]
-tick_labels = ['0', '0.5π', 'π', '1.5π', '2π']
-ax.set_xticks(ticks)
-ax.set_xticklabels(tick_labels)
+# fig, ax = plt.subplots()
+# ax.plot(w, y)
+ticks =       [0, 0.5*np.pi, np.pi, 1.5*np.pi, 2*np.pi]
+tick_labels = ['0','0.5π', 'π', '1.5π', '2π']
+# ax.set_xticks(ticks)
+# ax.set_xticklabels(tick_labels)
+
+plt.plot(w, y, linestyle="--", color="fuchsia", marker="v", label="Data")
+plt.xticks(ticks, tick_labels)
 plt.xlabel('ω')
 plt.ylabel('sin(ω)')
 plt.title('Exp 3: Sin(ω) Graph')
 plt.grid(True)
+plt.legend(loc="upper right")
 plt.show()
 
 
