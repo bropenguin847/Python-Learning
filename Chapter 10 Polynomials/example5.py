@@ -13,6 +13,7 @@ coefficients = [2, 4, 1]
 x_value = 3
 result = np.polyval(coefficients, x_value)
 
+
 # Output the result
 print('P(x) = 2x^2 + 4x + 1')
 print("P(3) =", result)  # P(3) = 31

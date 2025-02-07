@@ -58,6 +58,8 @@ matrix_num = df['matrix_number']
 
 # Task 1
 null_count = df.isnull().sum()
+# df.isna().index.tolist()
+np.nancumsum
 print('Number of missing values for each column')
 print(null_count)
 

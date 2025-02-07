@@ -24,8 +24,8 @@ Y = arr2[[1, 1, 0]]    # There is difference between double bracket and single b
 Z = arr2[1, 1, 0]      # For single bracket it is just basic indexing, fancy indexing uses double bracket.
 
 print(arr2)
-print(Y)
-print(Z)
+print(f'Fancy indexing:\n{Y}')
+print(f'Basic indexing:\n{Z}')
 
 # I had made the mistake of thinking that single bracket is fancy indexing, thus getting out
 # can you imagine my pain when i made this mistake, even though i had read about it???!!!
