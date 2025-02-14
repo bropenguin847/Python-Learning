@@ -123,9 +123,9 @@ Cheatsheet for subscripting and operator precedence
 <img src="images\syntax_reference.png" alt="syntax_reference"><br>
 <img src="images\appendix1.png" alt="subscripting"><br>
 <img src="images\appendix2.png" alt="operator precedence"><br>
+<img src="images\extra_appen.png" alt="extra_appen"><br>
 <img src="images\special_character.png" width="600" height="400" alt="Special Character"><br>
 <img src="images\unicode_symbol.png" width="600" height="400" alt="Unicode Symbol"><br>
-
 
 All the colors for matplotlib<br>
 [Simple matplotlib markers, line style and color](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html)<br>
