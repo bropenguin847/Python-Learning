@@ -38,7 +38,9 @@ def forecasting(places):
 
         for place in places:
             myurl = FORECAST_URL + f'?contains={place}@location__location_id&limit=7'
-            response = (requests.get(myurl)).json()
+            response = (requests.get(myurl, timeout=15)).json()
+            # Add timeout toprevent it from getting stuck on unresponsive servers
+
             # Print the location in center
             print(f'\n|{response[0]["location"]["location_name"]:-^45}|')
 
@@ -61,7 +63,8 @@ def warning(url, limit: int):
     """
     try:
         url += f'?limit={limit}'
-        response = requests.get(url)
+        response = requests.get(url, timeout=15)
+        # Add timeout toprevent it from getting stuck on unresponsive servers
         result = response.json()
         print('\n!!! Weather Warning !!!')
 
@@ -70,6 +73,11 @@ def warning(url, limit: int):
             print(f'Title: {result[i]["warning_issue"]["title_en"]}')
             print(f'Detail: {result[i]["text_en"]}')
         return result
+
+    except requests.exceptions.Timeout:
+        print("Request timed out.")
+        return None
+
     except requests.exceptions.RequestException as e:
         # Handle any network-related errors or exceptions
         print('Error:', e)
@@ -84,9 +92,10 @@ def earfquake(url, limit: int):
     """
     try:
         url += f'?limit={limit}'
-        response = requests.get(url)
+        response = requests.get(url, timeout=15)
+        # Add timeout toprevent it from getting stuck on unresponsive servers
         result = response.json()
-        print(f'\n!!! Earthquake warning !!!')
+        print('\n!!! Earthquake warning !!!')
 
         for i in range(limit):
             print(f'Date issued: {result[i]["localdatetime"][:10]}')
@@ -94,7 +103,11 @@ def earfquake(url, limit: int):
             print(f'Magnitue: {result[i]["magdefault"]} {result[i]["magtypedefault"]}')
             print(f'Status: {result[i]["status"]}')
         return result
-    
+
+    except requests.exceptions.Timeout:
+        print("Request timed out.")
+        return None
+
     except requests.exceptions.RequestException as e:
         # Handle any network-related errors or exceptions
         print('Error:', e)
