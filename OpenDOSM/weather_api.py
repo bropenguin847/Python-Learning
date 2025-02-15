@@ -34,17 +34,19 @@ def forecasting(places):
     """
 
     try:
-        print(f'|{"Date":-^14}|{"Summary forecast":-^30}|')
+        print(f'|{"Date":-^15}|{"Summary Forecast":-^29}|')
 
         for place in places:
             myurl = FORECAST_URL + f'?contains={place}@location__location_id&limit=7'
             response = (requests.get(myurl)).json()
             # Print the location in center
-            print(f'|{response[0]["location"]["location_name"]:-^45}|')
+            print(f'\n|{response[0]["location"]["location_name"]:-^45}|')
 
             for i in range(7):      # Repeat for 7 days
                 # Print the date and summary forecast
-                print(f'{response[i]["date"]:^15}|{response[i]["summary_forecast"]:^30}')
+                print(f'|{response[i]["date"]:^15}|{response[i]["summary_when"]:^29}|')
+                print(f'|{response[i]["summary_forecast"]:>40}     |')
+                print(f'|Min Temp:{response[i]["min_temp"]:^13}|Max Temp:{response[i]["max_temp"]:^13}|')
 
     except requests.exceptions.RequestException as e:
         # Handle any network-related errors or exceptions
@@ -60,12 +62,19 @@ def warning(url, limit: int):
     try:
         url += f'?limit={limit}'
         response = requests.get(url)
-        return response.json()
+        result = response.json()
+        print('\n!!! Weather Warning !!!')
 
+        for i in range(limit):
+            print(f'Date issued: {result[i]["warning_issue"]["issued"][:10]}')
+            print(f'Title: {result[i]["warning_issue"]["title_en"]}')
+            print(f'Detail: {result[i]["text_en"]}')
+        return result
     except requests.exceptions.RequestException as e:
         # Handle any network-related errors or exceptions
         print('Error:', e)
-        # return None
+        return None
+
 
 def earfquake(url, limit: int):
     r"""Prints out earthquake warning
@@ -76,15 +85,23 @@ def earfquake(url, limit: int):
     try:
         url += f'?limit={limit}'
         response = requests.get(url)
-        return response.json()
+        result = response.json()
+        print(f'\n!!! Earthquake warning !!!')
 
+        for i in range(limit):
+            print(f'Date issued: {result[i]["localdatetime"][:10]}')
+            print(f'Location: {result[i]["location_original"]}')
+            print(f'Magnitue: {result[i]["magdefault"]} {result[i]["magtypedefault"]}')
+            print(f'Status: {result[i]["status"]}')
+        return result
+    
     except requests.exceptions.RequestException as e:
         # Handle any network-related errors or exceptions
         print('Error:', e)
-        # return None
+        return None
 
 
 if __name__ == '__main__':
     forecasting(places_list)
-    print(warning(WARNING_URL, limit=2))
-    print(earfquake(EARTHQUAKE, limit=2))
+    warning(WARNING_URL, limit=2)
+    earfquake(EARTHQUAKE, limit=2)
